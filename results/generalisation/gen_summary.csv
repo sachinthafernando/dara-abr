@@ -1,0 +1,21 @@
+conditions,comparison,mean_diff,better,worse,no_difference,disagree,n
+all unseen,corel_official,-45.70119647829768,2.0,2.0,3.0,4.0,11.0
+all unseen,dara_online,215.3733341973881,6.0,4.0,0.0,1.0,11.0
+all unseen,pensieve_official,-22.621206333679257,7.0,2.0,1.0,1.0,11.0
+all unseen,ppo_lagrangian_t0.5,181.93059164297082,3.0,0.0,0.0,8.0,11.0
+all unseen,robustmpc,-62.94009444757473,4.0,3.0,1.0,3.0,11.0
+Synthetic mmWave,corel_official,7.926260093000381,0.0,0.0,1.0,1.0,2.0
+Synthetic mmWave,dara_online,22.08028490346331,1.0,1.0,0.0,0.0,2.0
+Synthetic mmWave,pensieve_official,44.062364993046955,2.0,0.0,0.0,0.0,2.0
+Synthetic mmWave,ppo_lagrangian_t0.5,-1.0270347086269127,0.0,0.0,0.0,2.0,2.0
+Synthetic mmWave,robustmpc,36.98870658310748,2.0,0.0,0.0,0.0,2.0
+Real mmWave (Lumos5G),corel_official,2.384576795573509,0.0,0.0,2.0,1.0,3.0
+Real mmWave (Lumos5G),dara_online,-25.311955284759733,0.0,3.0,0.0,0.0,3.0
+Real mmWave (Lumos5G),pensieve_official,48.78120764661586,3.0,0.0,0.0,0.0,3.0
+Real mmWave (Lumos5G),ppo_lagrangian_t0.5,-5.764319597674597,0.0,0.0,0.0,3.0,3.0
+Real mmWave (Lumos5G),robustmpc,6.055977497116373,0.0,0.0,1.0,2.0,3.0
+Non-mmWave 5G (Irish),corel_official,-87.61990197233264,2.0,2.0,0.0,2.0,6.0
+Non-mmWave 5G (Irish),dara_online,400.1469953697703,5.0,0.0,0.0,1.0,6.0
+Non-mmWave 5G (Irish),pensieve_official,-80.55027043273556,2.0,2.0,1.0,1.0,6.0
+Non-mmWave 5G (Irish),ppo_lagrangian_t0.5,336.7639227138261,3.0,0.0,0.0,3.0,6.0
+Non-mmWave 5G (Irish),robustmpc,-130.74773076348103,2.0,3.0,0.0,1.0,6.0

@@ -1,0 +1,80 @@
+environment,compared with,mean diff,CI low,CI high,median session diff,share of sessions DARA-L better,p (sessions),q (BH),p (seeds),pre-registered,verdict
+mmWave ×1,"Plain PPO, cap 0.25",2.119,-6.0346,10.1008,-3.4917,0.31,0.0228,0.0249,0.5165,True,inconclusive (tests disagree)
+mmWave ×1,"Plain PPO, cap 0.5",1.9013,-7.3754,10.9593,-4.5598,0.3,0.0051,0.0074,0.6496,True,inconclusive (tests disagree)
+mmWave ×1,"Plain PPO, cap 1",-2.5675,-10.7025,5.4524,-7.1878,0.24,0.0,0.0,0.4733,True,inconclusive (tests disagree)
+mmWave ×1,COREL,27.5035,18.6598,37.3813,18.1927,0.82,0.0,0.0,0.0003,True,DARA-L better
+mmWave ×1,"Plain PPO, cap 0.1 (original reward)",2.6117,-6.7938,11.8207,-4.4439,0.29,0.0111,0.0133,0.5451,True,inconclusive (tests disagree)
+mmWave ×1,Pensieve,28.1242,13.964,44.9002,24.4184,0.88,0.0,0.0,0.0229,True,DARA-L better
+mmWave ×1,"PPO-Lagrangian, 0.25 s",-3.0094,-9.5997,3.6616,-4.4373,0.25,0.0,0.0,0.412,True,inconclusive (tests disagree)
+mmWave ×1,"PPO-Lagrangian, 0.5 s",2.0855,-7.0746,10.9665,-4.882,0.28,0.0055,0.0074,0.6122,True,inconclusive (tests disagree)
+mmWave ×1,"PPO-Lagrangian, 1 s",1.72,-7.0825,10.225,-4.532,0.29,0.0039,0.0067,0.6404,True,inconclusive (tests disagree)
+mmWave ×1,"Plain PPO, no cap",0.615,-6.3044,7.2591,-3.6437,0.31,0.0278,0.0278,0.8523,True,inconclusive (tests disagree)
+mmWave ×1,RobustMPC,64.2835,55.85,73.2711,61.5715,0.97,0.0,0.0,,True,DARA-L better
+mmWave ×1,Always quality 4 (best fixed),-5.1474,-13.2627,2.9123,-11.7018,0.09,0.0,0.0,,True,inconclusive (tests disagree)
+mmWave ×2,"Plain PPO, cap 0.25",17.5336,-8.234,47.9801,-18.8248,0.26,0.0002,0.0002,0.008,True,inconclusive (tests disagree)
+mmWave ×2,"Plain PPO, cap 0.5",15.06,-9.679,45.1897,-18.8248,0.24,0.0001,0.0001,0.0145,True,inconclusive (tests disagree)
+mmWave ×2,"Plain PPO, cap 1",17.4441,-8.8818,50.099,-18.5358,0.25,0.0001,0.0002,0.0083,True,inconclusive (tests disagree)
+mmWave ×2,COREL,46.3798,28.6427,65.2465,43.4468,0.94,0.0,0.0,0.0036,True,DARA-L better
+mmWave ×2,"Plain PPO, cap 0.1 (original reward)",17.5531,-8.3737,48.3778,-18.4568,0.25,0.0002,0.0002,0.0086,True,inconclusive (tests disagree)
+mmWave ×2,Pensieve,33.8801,20.1845,48.0296,33.7034,0.98,0.0,0.0,0.0034,True,DARA-L better
+mmWave ×2,"PPO-Lagrangian, 0.125 s",20.8164,10.8669,32.1794,18.8975,0.88,0.0,0.0,0.0063,False,DARA-L better
+mmWave ×2,"PPO-Lagrangian, 0.25 s",-9.8442,-17.8836,-1.9847,-10.2832,0.12,0.0,0.0,0.0655,True,DARA-L worse
+mmWave ×2,"PPO-Lagrangian, 0.5 s",-9.644,-20.4127,1.0984,-19.0103,0.21,0.0,0.0,0.069,True,inconclusive (tests disagree)
+mmWave ×2,"PPO-Lagrangian, 1 s",15.965,-10.0261,47.456,-18.8248,0.24,0.0001,0.0001,0.014,True,inconclusive (tests disagree)
+mmWave ×2,"Plain PPO, no cap",-1.604,-18.4005,19.0741,-18.3592,0.26,0.0,0.0,0.8265,True,inconclusive (tests disagree)
+mmWave ×2,RobustMPC,51.4124,42.0857,61.3613,47.6042,0.96,0.0,0.0,,True,DARA-L better
+mmWave ×2,Always quality 3 (best fixed),10.8254,-1.4335,23.4492,-3.1931,0.44,0.8554,0.8554,,True,no significant difference
+mmWave ×4,COREL,14.033,-3.7992,33.1079,15.1241,0.73,0.0,0.0,0.2371,True,inconclusive (tests disagree)
+mmWave ×4,"DARA, cap only",30.6231,6.7675,63.8623,-1.9232,0.49,0.3409,0.3671,0.0247,True,inconclusive (tests disagree)
+mmWave ×4,"Plain PPO, cap 0.1 (original reward)",122.7645,53.9934,208.3344,4.7485,0.52,0.0038,0.0076,0.0,True,DARA-L better
+mmWave ×4,Pensieve,43.1001,27.1804,60.4731,37.2997,0.96,0.0,0.0,0.0066,True,DARA-L better
+mmWave ×4,"PPO-Lagrangian, 0.25 s",24.1965,12.8152,36.745,23.3072,0.88,0.0,0.0,0.0119,True,DARA-L better
+mmWave ×4,"PPO-Lagrangian, 0.5 s",-3.4032,-9.2812,1.8744,-5.7867,0.24,0.0,0.0,0.2337,True,inconclusive (tests disagree)
+mmWave ×4,"PPO-Lagrangian, 1 s",5.6682,-7.2999,21.4703,-9.8707,0.41,0.1914,0.2233,0.2604,True,no significant difference
+mmWave ×4,"PPO-Lagrangian, 2 s",79.3551,35.7584,135.3712,3.9601,0.51,0.0087,0.0122,0.0003,True,DARA-L better
+mmWave ×4,"Plain PPO, no cap",13.936,-0.9176,33.7217,-5.0144,0.46,0.9808,0.9808,0.029,True,no significant difference
+mmWave ×4,"Plain PPO, cap 0.25",115.6592,49.2778,198.7308,4.4928,0.53,0.0049,0.0076,0.0,True,DARA-L better
+mmWave ×4,"Plain PPO, cap 0.5",123.8432,54.4042,210.6081,7.1701,0.52,0.0046,0.0076,0.0,True,DARA-L better
+mmWave ×4,"Plain PPO, cap 1",102.6181,44.6025,181.2998,2.7789,0.52,0.0041,0.0076,0.001,True,DARA-L better
+mmWave ×4,"Plain PPO, cap 2",77.0833,33.6405,134.7403,3.6113,0.52,0.007,0.0141,0.0019,False,DARA-L better
+mmWave ×4,"Plain PPO, cap 5",23.2987,-0.9592,60.7469,-8.686,0.42,0.7859,0.7859,0.1345,False,no significant difference
+mmWave ×4,"DARA-L, pre-flight",0.8237,-6.0118,7.7277,0.8242,0.58,0.1312,0.1749,0.8261,False,no significant difference
+mmWave ×4,PPO on the score,-2.5731,-12.0427,8.7511,-11.372,0.37,0.0038,0.0141,0.467,False,inconclusive (tests disagree)
+mmWave ×4,RobustMPC,41.5758,33.8701,49.5929,38.2942,0.87,0.0,0.0,,True,DARA-L better
+mmWave ×4,Always quality 2 (best fixed),18.4051,7.7977,29.6131,1.5009,0.55,0.0989,0.1258,,True,inconclusive (tests disagree)
+mmWave ×8,"Plain PPO, cap 0.25",356.8805,192.4587,563.5991,116.2609,0.74,0.0,0.0,0.0,True,DARA-L better
+mmWave ×8,"Plain PPO, cap 0.5",347.5823,188.3019,552.216,114.0351,0.74,0.0,0.0,0.0,True,DARA-L better
+mmWave ×8,"Plain PPO, cap 1",247.912,135.2457,396.5402,94.0999,0.73,0.0,0.0,0.0007,True,DARA-L better
+mmWave ×8,COREL,-22.3561,-36.0633,-10.2465,-7.7961,0.32,0.0,0.0,0.0051,True,DARA-L worse
+mmWave ×8,"Plain PPO, cap 0.1 (original reward)",361.8326,194.8267,571.5178,115.7492,0.74,0.0,0.0,0.0,True,DARA-L better
+mmWave ×8,Pensieve,1.9719,-9.9022,13.0734,2.7261,0.63,0.0488,0.0533,0.7638,True,no significant difference
+mmWave ×8,"PPO-Lagrangian, 0.25 s",-6.1043,-15.7219,2.6687,-4.853,0.14,0.0,0.0,0.2737,True,inconclusive (tests disagree)
+mmWave ×8,"PPO-Lagrangian, 0.5 s",-17.4433,-40.0549,14.2869,-12.7356,0.17,0.0,0.0,0.2853,True,inconclusive (tests disagree)
+mmWave ×8,"PPO-Lagrangian, 1 s",-29.6674,-46.8284,-13.0602,-30.1923,0.16,0.0,0.0,0.0011,True,DARA-L worse
+mmWave ×8,"Plain PPO, no cap",-2.5838,-30.2659,30.8313,-19.2718,0.4,0.0401,0.0481,0.8055,True,inconclusive (tests disagree)
+mmWave ×8,RobustMPC,-4.743,-17.5008,6.7634,4.8751,0.64,0.0996,0.0996,,True,no significant difference
+mmWave ×8,Always quality 1 (best fixed),-12.6511,-25.039,-0.4083,-21.9908,0.21,0.0,0.0,,True,DARA-L worse
+Irish driving ×1,COREL,18.9297,-2.2842,39.9521,17.0753,0.82,0.0,0.0,0.1686,True,inconclusive (tests disagree)
+Irish driving ×1,Pensieve,17.333,6.7948,29.2186,16.6701,0.84,0.0,0.0,0.019,True,DARA-L better
+Irish driving ×1,"PPO-Lagrangian, 0.5 s",-12.6764,-25.472,1.3439,-8.8587,0.18,0.0,0.0,0.1242,True,inconclusive (tests disagree)
+Irish driving ×1,RobustMPC,-31.6511,-42.1644,-22.0701,-21.5835,0.11,0.0,0.0,,True,DARA-L worse
+Irish driving ×1,Always quality 0 (best fixed),43.5205,32.4424,56.4878,33.6721,0.83,0.0,0.0,,True,DARA-L better
+harsh mmWave ×4,COREL,-11.0095,-28.6287,7.1563,-8.9324,0.29,0.0,0.0,0.3129,True,inconclusive (tests disagree)
+harsh mmWave ×4,Pensieve,30.1759,21.7529,41.3684,30.8792,0.91,0.0,0.0,0.0028,True,DARA-L better
+harsh mmWave ×4,"PPO-Lagrangian, 0.125 s",-1.1751,-13.9774,12.4438,-0.8237,0.44,0.1145,0.1145,0.8773,False,no significant difference
+harsh mmWave ×4,"PPO-Lagrangian, 0.25 s",1.8038,-9.5402,14.5713,2.2808,0.67,0.0018,0.0028,0.7956,False,inconclusive (tests disagree)
+harsh mmWave ×4,"PPO-Lagrangian, 0.5 s",-30.0063,-41.4667,-18.1104,-26.9193,0.08,0.0,0.0,0.0016,True,DARA-L worse
+harsh mmWave ×4,"PPO-Lagrangian, 1 s",-37.0629,-49.5783,-23.6583,-36.2718,0.2,0.0,0.0,0.0007,False,DARA-L worse
+harsh mmWave ×4,RobustMPC,4.7763,-3.5326,15.5346,1.2979,0.51,0.0711,0.0711,,True,no significant difference
+harsh mmWave ×4,Always quality 1 (best fixed),-17.1686,-28.2163,-5.754,-23.9883,0.1,0.0,0.0,,True,DARA-L worse
+Lumos5G ×4,COREL,-5.2961,-10.0203,-0.4129,-5.587,0.27,0.0,0.0,0.0535,True,DARA-L worse
+Lumos5G ×4,Pensieve,7.1,-1.788,19.0004,0.5289,0.52,0.0398,0.0663,0.2621,True,no significant difference
+Lumos5G ×4,"PPO-Lagrangian, 0.5 s",21.4238,3.1359,48.1453,-1.461,0.44,0.8689,0.8689,0.0,True,inconclusive (tests disagree)
+Lumos5G ×4,RobustMPC,34.3475,29.3153,39.4673,29.3795,0.95,0.0,0.0,,True,DARA-L better
+Lumos5G ×4,Always quality 4 (best fixed),21.7577,2.5429,49.7513,-4.7972,0.4,0.3658,0.4573,,True,inconclusive (tests disagree)
+Irish static ×1,"PPO-Lagrangian, 0.125 s",31.0895,17.8091,43.9929,25.3347,0.99,0.0,0.0,0.006,False,DARA-L better
+Irish static ×1,"PPO-Lagrangian, 0.25 s",13.5981,3.5132,24.3596,11.3195,0.92,0.0,0.0,0.0532,False,DARA-L better
+Irish static ×1,"PPO-Lagrangian, 0.5 s",-6.0043,-13.204,1.6553,-7.292,0.22,0.0,0.0,0.1255,False,inconclusive (tests disagree)
+Irish static ×1,"PPO-Lagrangian, 1 s",14.3416,1.6917,30.7199,-1.5384,0.44,0.6303,0.6303,0.0192,False,inconclusive (tests disagree)
+Irish static ×1,RobustMPC,24.7251,18.514,31.0275,19.3581,0.96,0.0,0.0,,False,DARA-L better
+Irish static ×1,Always quality 3 (best fixed),15.9531,8.3711,23.667,10.3516,0.77,0.0,0.0,,False,DARA-L better

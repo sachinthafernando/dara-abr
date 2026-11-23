@@ -1,0 +1,93 @@
+== networks (throughput in Mbit/s) ==
+                      network           family  traces  hours   mean   p10  median     p90     max  share_below_5  lag1_log10
+      generator: training mix mmwave_synthetic     200  33.33 305.05  3.75  106.35  910.02 1920.00           0.10        0.75
+  generator: urban_pedestrian mmwave_synthetic     200  33.33 254.44  0.73  100.61  858.69 1920.00           0.12        0.77
+     generator: urban_driving mmwave_synthetic     200  33.33 237.44  8.29   96.03  812.05 1920.00           0.09        0.71
+      generator: urban_canyon mmwave_synthetic     200  33.33 113.26  9.03   30.95  313.83 1920.00           0.08        0.77
+          generator: motorway mmwave_synthetic     200  33.33 323.24  6.39  126.69  939.57 1920.00           0.09        0.65
+            generator: tunnel mmwave_synthetic     200  33.33  27.02  0.18   15.62   53.97 1533.05           0.34        0.84
+      generator: under_bridge mmwave_synthetic     200  33.33 273.41  0.38  103.28  877.58 1920.00           0.18        0.76
+generator: crowded_stationary mmwave_synthetic     200  33.33 198.50  0.59   85.58  777.14 1920.00           0.12        0.75
+     generator: suburban_open mmwave_synthetic     200  33.33 713.44 96.74  794.22 1366.12 1920.00           0.02        0.82
+                 Lumos5G: all      mmwave_real     118  18.92 520.67 43.00  424.00 1180.00 1920.00           0.04        0.76
+             Lumos5G: driving      mmwave_real      46   3.11 343.29 36.00  124.00  918.00 1870.00           0.03        0.71
+             Lumos5G: walking      mmwave_real      72  15.82 555.50 44.00  505.00 1210.00 1920.00           0.04        0.80
+                Irish 5G: all    non_mmwave_5g      21  12.71  44.88  0.69   14.57  160.58  532.90           0.26        0.66
+            Irish 5G: driving    non_mmwave_5g      16   7.93  29.31  0.48    8.93   94.09  532.90           0.33        0.67
+             Irish 5G: static    non_mmwave_5g       5   4.78  70.70  1.73   36.29  202.47  333.07           0.13        0.62
+
+== channel states of the generator (all scenarios pooled) ==
+            share     mean   median      p10      p90
+OUTAGE       0.13     0.52     0.30     0.08     1.11
+DEEP_NLOS    0.32    23.65    20.70    10.58    40.37
+NLOS         0.27   119.66   113.37    77.05   165.69
+MIXED        0.09   436.81   427.15   317.96   573.71
+LOS          0.16   866.37   853.94   695.73  1049.61
+STRONG_LOS   0.04  1439.14  1430.19  1235.72  1654.00
+
+== channel-state occupancy per scenario ==
+state               OUTAGE  DEEP_NLOS   NLOS  MIXED    LOS  STRONG_LOS
+scenario                                                              
+crowded_stationary   0.123      0.345  0.321  0.088  0.107       0.016
+motorway             0.080      0.205  0.359  0.141  0.181       0.035
+suburban_open        0.015      0.050  0.160  0.133  0.496       0.145
+tunnel               0.335      0.583  0.075  0.005  0.002       0.000
+under_bridge         0.173      0.201  0.330  0.109  0.157       0.030
+urban_canyon         0.075      0.532  0.290  0.058  0.041       0.004
+urban_driving        0.083      0.323  0.337  0.108  0.127       0.022
+urban_pedestrian     0.117      0.294  0.317  0.098  0.143       0.031
+
+== ladder feasibility: share of seconds with throughput >= tier bitrate ==
+-- ladder x1 --
+                      network  tier0_3Mbps  tier1_6Mbps  tier2_12Mbps  tier3_24Mbps  tier4_44Mbps
+      generator: training mix        0.901        0.895         0.859         0.727         0.640
+  generator: urban_pedestrian        0.884        0.882         0.853         0.695         0.601
+     generator: urban_driving        0.918        0.911         0.865         0.724         0.624
+      generator: urban_canyon        0.926        0.921         0.853         0.593         0.425
+          generator: motorway        0.926        0.902         0.865         0.803         0.755
+            generator: tunnel        0.669        0.660         0.585         0.306         0.124
+      generator: under_bridge        0.833        0.820         0.787         0.709         0.651
+generator: crowded_stationary        0.877        0.876         0.845         0.656         0.544
+     generator: suburban_open        0.985        0.985         0.979         0.952         0.937
+                 Lumos5G: all        0.968        0.958         0.943         0.922         0.899
+             Lumos5G: driving        0.973        0.966         0.952         0.923         0.890
+             Lumos5G: walking        0.967        0.956         0.941         0.922         0.901
+                Irish 5G: all        0.811        0.712         0.545         0.348         0.262
+            Irish 5G: driving        0.766        0.623         0.396         0.211         0.144
+             Irish 5G: static        0.887        0.860         0.792         0.577         0.458
+-- ladder x4 --
+                      network  tier0_12Mbps  tier1_24Mbps  tier2_48Mbps  tier3_96Mbps  tier4_176Mbps
+      generator: training mix         0.859         0.727         0.630         0.541          0.348
+  generator: urban_pedestrian         0.853         0.695         0.596         0.521          0.285
+     generator: urban_driving         0.865         0.724         0.612         0.500          0.283
+      generator: urban_canyon         0.853         0.593         0.414         0.326          0.115
+          generator: motorway         0.865         0.803         0.728         0.586          0.419
+            generator: tunnel         0.585         0.306         0.111         0.063          0.013
+      generator: under_bridge         0.787         0.709         0.638         0.527          0.331
+generator: crowded_stationary         0.845         0.656         0.538         0.466          0.223
+     generator: suburban_open         0.979         0.952         0.936         0.902          0.779
+                 Lumos5G: all         0.943         0.922         0.895         0.819          0.598
+             Lumos5G: driving         0.952         0.923         0.885         0.766          0.443
+             Lumos5G: walking         0.941         0.922         0.897         0.830          0.628
+                Irish 5G: all         0.545         0.348         0.252         0.164          0.084
+            Irish 5G: driving         0.396         0.211         0.140         0.099          0.043
+             Irish 5G: static         0.792         0.577         0.438         0.272          0.153
+-- ladder x8 --
+                      network  tier0_24Mbps  tier1_48Mbps  tier2_96Mbps  tier3_192Mbps  tier4_352Mbps
+      generator: training mix         0.727         0.630         0.541          0.341          0.310
+  generator: urban_pedestrian         0.695         0.596         0.521          0.281          0.260
+     generator: urban_driving         0.724         0.612         0.500          0.274          0.236
+      generator: urban_canyon         0.593         0.414         0.326          0.110          0.095
+          generator: motorway         0.803         0.728         0.586          0.402          0.315
+            generator: tunnel         0.306         0.111         0.063          0.011          0.006
+      generator: under_bridge         0.709         0.638         0.527          0.320          0.273
+generator: crowded_stationary         0.656         0.538         0.466          0.219          0.200
+     generator: suburban_open         0.952         0.936         0.902          0.777          0.757
+                 Lumos5G: all         0.922         0.895         0.819          0.591          0.532
+             Lumos5G: driving         0.923         0.885         0.766          0.433          0.347
+             Lumos5G: walking         0.922         0.897         0.830          0.622          0.569
+                Irish 5G: all         0.348         0.252         0.164          0.069          0.002
+            Irish 5G: driving         0.211         0.140         0.099          0.037          0.003
+             Irish 5G: static         0.577         0.438         0.272          0.122          0.000
+
+written to results/data

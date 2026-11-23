@@ -1,0 +1,20 @@
+# raw datasets: download them yourself (see data/README.md); never commit third-party data
+data/raw/**
+!data/raw/*/
+!data/raw/**/.gitkeep
+# derived traces are rebuilt by scripts/data/prepare_traces.py; content_params.json and MANIFEST.json are kept
+data/processed/*.npz
+# outputs of training and evaluation jobs (checkpoints, per-run logs, executed notebooks)
+runs/**
+logs/**
+!runs/.gitkeep
+!logs/.gitkeep
+# results/, figures/ and overview/ ARE tracked: they are the published results. Re-running the analysis overwrites
+# them, and `git diff` then shows what changed. Intermediate figure folders are not tracked:
+figures/paper/_work/
+# python / jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+.pytest_cache/

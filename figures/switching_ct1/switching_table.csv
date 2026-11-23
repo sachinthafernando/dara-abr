@@ -1,0 +1,6 @@
+method,seeds,sessions,switches_per_session,sum_abs_dq_per_session,switch_1_per_session,switch_1_share,switch_2_per_session,switch_2_share,switch_3_per_session,switch_3_share,switch_4_per_session,switch_4_share,tier0_share,tier1_share,tier2_share,tier3_share,tier4_share
+dara_online_lag_m015,5,500,7.09,6.0541,5.5,0.7757,1.568,0.2212,0.022,0.0031,0.0,0.0,0.0,0.0049,0.0756,0.2096,0.7099
+ppo_lagrangian_t0.5,5,500,0.59,0.413,0.59,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.204,0.796
+corel_official,5,500,7.852,17.1932,1.366,0.174,1.944,0.2476,0.492,0.0627,4.05,0.5158,0.1351,0.0172,0.0849,0.0,0.7627
+pensieve_official,5,500,13.706,18.7631,5.55,0.4049,5.016,0.366,2.274,0.1659,0.866,0.0632,0.063,0.0287,0.1702,0.0633,0.6749
+robustmpc,1,100,20.52,23.5673,13.06,0.6365,4.25,0.2071,2.03,0.0989,1.18,0.0575,0.1317,0.1139,0.1712,0.1302,0.453

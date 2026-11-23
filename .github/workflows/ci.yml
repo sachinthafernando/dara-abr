@@ -1,0 +1,67 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      smoke:
+        description: "Also run the CPU smoke test of the training pipeline"
+        type: boolean
+        default: false
+
+jobs:
+  results:
+    name: Shipped results (Python ${{ matrix.python }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.9", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+      - run: pip install -r requirements-analysis.txt
+      - name: Notebook is the version that produced the results
+        run: echo "9d323ac8b76368b3a28e6cc3b0407023  notebooks/dara_abr.ipynb" | md5sum -c -
+      - name: Byte-compile sources
+        run: python -m compileall -q src scripts tests
+      - name: Benchmark summary
+        run: python scripts/analysis/benchmark_summary.py --out /tmp/ci_out
+      - name: Regression tests
+        run: pytest -v
+      - name: Data pipeline on synthetic fixtures (scratch copy; the values are random)
+        run: |
+          cp -r . /tmp/fixture_repo && cd /tmp/fixture_repo
+          python tests/make_fixtures.py --dest .
+          python scripts/data/inspect_datasets.py
+          python scripts/data/prepare_traces.py
+          python scripts/data/analyse_traces.py
+
+  smoke:
+    name: CPU smoke test (generator, ct4)
+    if: github.event_name == 'workflow_dispatch' && inputs.smoke
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - run: pip install -r requirements.txt && python -m ipykernel install --user --name python3
+      - run: python scripts/sweeps/make_sweeps.py
+      - run: bash scripts/hpc/run_local.sh configs/sweeps/smoke_train.tsv 1 6
+      - name: Held-out trace split (synthetic fixtures)
+        run: |
+          python tests/make_fixtures.py --dest . && python scripts/data/prepare_traces.py
+          python tests/test_holdout.py
+      - if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: smoke-logs
+          path: logs/

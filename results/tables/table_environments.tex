@@ -1,0 +1,15 @@
+\begin{table*}[t]\centering\footnotesize
+\caption{Every training environment: mean $J_0$ (freeze s per session) over the 100 test sessions and 5 seeds. DARA-L's derived budget (s per chunk) in brackets; [--]: DARA did not act. Marks give DARA-L against that method: + / $-$ DARA-L significantly better / worse, = no significant difference, ? tests disagree.}
+\label{tab:environments}
+\begin{tabular}{lrrrrr}\toprule
+Training environment & DARA-L [budget] & PPO-Lag., 0.5 s & COREL & Pensieve & RobustMPC \\\midrule
+mmWave $\times$1 & 286.3 (35) [$-$$-$] & 285.4 (34) ? & 260.0 (9) + & 259.4 (11) + & 223.2 (6) + \\
+mmWave $\times$2 & 238.1 (20) [0.23] & 247.7 (53) ? & 191.7 (6) + & 204.2 (14) + & 186.7 (11) + \\
+mmWave $\times$4 & 188.7 (26) [0.38] & 192.1 (38) ? & 174.7 (14) ? & 145.6 (15) + & 147.1 (18) + \\
+mmWave $\times$8 & 100.2 (18) [0.51] & 117.6 (32) ? & 122.5 (17) $-$ & 98.2 (24) = & 104.9 (33) = \\
+harsh mmWave $\times$4 & 99.8 (19) [0.45] & 129.8 (30) $-$ & 110.8 (17) ? & 69.7 (14) + & 95.1 (29) = \\
+Irish driving $\times$1 & 88.8 (32) [0.56] & 101.5 (32) ? & 69.9 (28) ? & 71.5 (29) + & 120.5 (33) $-$ \\
+Lumos5G $\times$4 & 253.8 (16) [0.14] & 232.4 (67) ? & 259.1 (16) $-$ & 246.7 (23) = & 219.5 (4) + \\
+Irish static $\times$1 & 220.9 (21) [0.33] & 226.9 (41) ? & -- & -- & 196.2 (17) + \\
+\bottomrule\end{tabular}
+\end{table*}

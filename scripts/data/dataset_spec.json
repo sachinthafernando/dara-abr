@@ -1,0 +1,79 @@
+{
+  "_note": "Expected layout and columns of the raw datasets. If your files differ, edit this file (not the scripts) and re-run inspect_datasets.py.",
+  "lumos5g": {
+    "citation": "A. Narayanan et al., Lumos5G: Mapping and Predicting Commercial mmWave 5G Throughput, ACM IMC 2020",
+    "source": "https://ieee-dataport.org/node/3598 (Lumos5G-v1.0.zip)",
+    "files": [
+      "data/raw/lumos5g/*.csv"
+    ],
+    "required_columns": [
+      "run_num",
+      "seq_num",
+      "Throughput",
+      "mobility_mode",
+      "trajectory_direction"
+    ],
+    "optional_columns": [
+      "nrStatus",
+      "nr_ssSinr",
+      "movingSpeed",
+      "tower_id",
+      "abstractSignalStr"
+    ],
+    "throughput_column": "Throughput",
+    "throughput_to_mbps": 1.0,
+    "trace_keys": [
+      "mobility_mode",
+      "trajectory_direction",
+      "run_num"
+    ],
+    "order_column": "seq_num",
+    "sample_period_s": 1.0,
+    "status_column": "nrStatus",
+    "plausible_max_mbps": 3000.0
+  },
+  "irish5g": {
+    "citation": "D. Raca et al., Beyond Throughput, The Next Generation: A 5G Dataset with Channel and Context Metrics, ACM MMSys 2020",
+    "source": "https://github.com/uccmisl/5Gdataset (5G-production-dataset.zip)",
+    "files": [
+      "data/raw/irish5g/**/Download/Static/*.csv",
+      "data/raw/irish5g/**/Download/Driving/*.csv"
+    ],
+    "mobility_from_folder": true,
+    "required_columns": [
+      "Timestamp",
+      "DL_bitrate"
+    ],
+    "optional_columns": [
+      "NetworkMode",
+      "State",
+      "Speed",
+      "RSRP",
+      "SNR",
+      "CQI"
+    ],
+    "throughput_column": "DL_bitrate",
+    "throughput_to_mbps": 0.001,
+    "timestamp_column": "Timestamp",
+    "timestamp_format": "%Y.%m.%d_%H.%M.%S",
+    "sample_period_s": 1.0,
+    "status_column": "NetworkMode",
+    "plausible_max_mbps": 3000.0
+  },
+  "puffer": {
+    "citation": "F. Y. Yan et al., Learning in situ: a randomized experiment in video streaming, USENIX NSDI 2020",
+    "source": "https://puffer.stanford.edu/results/ (video_size_*.csv)",
+    "files": [
+      "data/raw/puffer/video_size_*.csv"
+    ],
+    "required_columns": [],
+    "only_for": "re-running scripts/data/calibrate_content.py; the calibrated data/processed/content_params.json is already included",
+    "n_columns": 5,
+    "expected_header": "time (ns GMT), format, channel, video_ts, size (read by position)"
+  },
+  "trace_preparation": {
+    "max_gap_s": 3,
+    "min_trace_s": 120,
+    "fill_short_gaps": "linear interpolation over gaps of at most max_gap_s seconds; longer gaps split the trace"
+  }
+}

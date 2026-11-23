@@ -1,0 +1,7 @@
+method,J0 (mean),seed s.d.,freeze s/session,mean quality level,worst 5% of sessions (J0),budget (s/chunk),final λ,DARA-L minus this [95% CI],verdict
+DARA-L (ours),253.8,2.5,16.1,3.47,86,0.144,1.54,,
+"PPO-Lagrangian, 0.5 s",232.4,1.4,66.5,3.95,68,0.5,0.06,"+21.4 [+3.1, +48.1]",unclear
+COREL,259.1,4.3,16.3,3.62,96,,,"-5.3 [-10.0, -0.4]",DARA-L worse
+Pensieve,246.7,12.1,23.2,3.60,82,,,"+7.1 [-1.8, +19.0]",no difference
+RobustMPC,219.5,,4.5,,75,,,"+34.3 [+29.3, +39.5]",DARA-L better
+Always quality 4 (best fixed),232.1,,69.6,,66,,,"+21.8 [+2.5, +49.8]",unclear

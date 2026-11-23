@@ -1,0 +1,16 @@
+network,family,traces,hours,mean,p10,median,p90,max,share_below_5,lag1_log10
+generator: training mix,mmwave_synthetic,200,33.33,305.049,3.75,106.353,910.022,1920.0,0.102,0.752
+generator: urban_pedestrian,mmwave_synthetic,200,33.33,254.442,0.729,100.61,858.693,1920.0,0.117,0.771
+generator: urban_driving,mmwave_synthetic,200,33.33,237.44,8.288,96.029,812.048,1920.0,0.085,0.713
+generator: urban_canyon,mmwave_synthetic,200,33.33,113.26,9.028,30.947,313.835,1920.0,0.076,0.773
+generator: motorway,mmwave_synthetic,200,33.33,323.235,6.393,126.686,939.574,1920.0,0.089,0.646
+generator: tunnel,mmwave_synthetic,200,33.33,27.022,0.176,15.615,53.97,1533.055,0.336,0.836
+generator: under_bridge,mmwave_synthetic,200,33.33,273.408,0.382,103.281,877.58,1920.0,0.175,0.762
+generator: crowded_stationary,mmwave_synthetic,200,33.33,198.498,0.591,85.584,777.136,1920.0,0.123,0.751
+generator: suburban_open,mmwave_synthetic,200,33.33,713.439,96.743,794.222,1366.122,1920.0,0.015,0.817
+Lumos5G: all,mmwave_real,118,18.92,520.665,43.0,424.0,1180.0,1920.0,0.039,0.763
+Lumos5G: driving,mmwave_real,46,3.11,343.293,36.0,124.0,918.0,1870.0,0.031,0.709
+Lumos5G: walking,mmwave_real,72,15.82,555.504,44.0,505.0,1210.0,1920.0,0.041,0.798
+Irish 5G: all,non_mmwave_5g,21,12.71,44.881,0.693,14.568,160.581,532.905,0.257,0.655
+Irish 5G: driving,non_mmwave_5g,16,7.93,29.309,0.485,8.925,94.086,532.905,0.333,0.666
+Irish 5G: static,non_mmwave_5g,5,4.78,70.704,1.727,36.293,202.468,333.07,0.131,0.622

@@ -1,0 +1,191 @@
+{
+  "lumos5g": {
+    "output": "data/processed/lumos5g.npz",
+    "created": "2026-10-14 21:06",
+    "citation": "A. Narayanan et al., Lumos5G: Mapping and Predicting Commercial mmWave 5G Throughput, ACM IMC 2020",
+    "source": "https://ieee-dataport.org/node/3598 (Lumos5G-v1.0.zip)",
+    "files": [
+      {
+        "path": "data/raw/lumos5g/Lumos5G-v1.0.csv",
+        "md5": "dd525dac43a0823a94e117bbb9a23a14"
+      }
+    ],
+    "unit_conversion": "Throughput x 1.0 -> Mbit/s",
+    "cleaning": {
+      "max_gap_s": 3,
+      "min_trace_s": 120,
+      "fill_short_gaps": "linear interpolation over gaps of at most max_gap_s seconds; longer gaps split the trace"
+    },
+    "status_column": "nrStatus",
+    "status_share": {
+      "CONNECTED": 0.7689,
+      "NOT_RESTRICTED": 0.23,
+      "NONE": 0.0011
+    },
+    "traces": 118,
+    "hours": 18.922,
+    "length_s": {
+      "min": 181,
+      "median": 785,
+      "max": 800
+    },
+    "mbps": {
+      "mean": 520.67,
+      "median": 424.0,
+      "p10": 43.0,
+      "p90": 1180.0,
+      "max": 1920.0,
+      "share_below_1": 0.0252
+    },
+    "by_prefix": {
+      "Driving": {
+        "traces": 46,
+        "hours": 3.106,
+        "mean_mbps": 343.29,
+        "median_mbps": 124.0
+      },
+      "Walking": {
+        "traces": 72,
+        "hours": 15.815,
+        "mean_mbps": 555.5,
+        "median_mbps": 505.0
+      }
+    }
+  },
+  "irish5g": {
+    "output": "data/processed/irish5g_download.npz",
+    "created": "2026-10-14 21:06",
+    "citation": "D. Raca et al., Beyond Throughput, The Next Generation: A 5G Dataset with Channel and Context Metrics, ACM MMSys 2020",
+    "source": "https://github.com/uccmisl/5Gdataset (5G-production-dataset.zip)",
+    "files": [
+      {
+        "path": "data/raw/irish5g/Download/Driving/B_2019.12.14_10.16.30.csv",
+        "md5": "c7fd7e70a9581bdca51a09dd066f7350"
+      },
+      {
+        "path": "data/raw/irish5g/Download/Driving/B_2019.12.16_07.22.43.csv",
+        "md5": "66ab1eb83c8058131aeb542a46559cb8"
+      },
+      {
+        "path": "data/raw/irish5g/Download/Driving/B_2019.12.16_11.49.59.csv",
+        "md5": "816bd165e3d2b341c67ed5dad0ae3965"
+      },
+      {
+        "path": "data/raw/irish5g/Download/Driving/B_2019.12.16_12.27.05.csv",
+        "md5": "11733d609eff62205cfdef3779a70fb8"
+      },
+      {
+        "path": "data/raw/irish5g/Download/Driving/B_2019.12.16_14.23.32.csv",
+        "md5": "14f4ccaaedb8013d1cfec5988a1e1bfc"
+      },
+      {
+        "path": "data/raw/irish5g/Download/Driving/B_2019.12.17_07.32.39.csv",
+        "md5": "1f319113370752f03f6c1abbef9e8a71"
+      },
+      {
+        "path": "data/raw/irish5g/Download/Driving/B_2020.01.16_07.26.43.csv",
+        "md5": "1ca7a3de6038b50f410ac6a1a4b6cb7a"
+      },
+      {
+        "path": "data/raw/irish5g/Download/Driving/B_2020.01.16_09.56.56.csv",
+        "md5": "32ab694bfc97a0fbc2ada912c78d104d"
+      },
+      {
+        "path": "data/raw/irish5g/Download/Driving/B_2020.01.16_12.10.03.csv",
+        "md5": "0ccda979d48911b5e47c249b067bba42"
+      },
+      {
+        "path": "data/raw/irish5g/Download/Driving/B_2020.02.13_13.03.24.csv",
+        "md5": "b7c4d4a47bdbbfc406ff71119bd953b0"
+      },
+      {
+        "path": "data/raw/irish5g/Download/Driving/B_2020.02.13_15.02.01.csv",
+        "md5": "96dc563aaf19bd73f9abceb1e69d838f"
+      },
+      {
+        "path": "data/raw/irish5g/Download/Driving/B_2020.02.14_07.29.00.csv",
+        "md5": "909f5a3b26e57f8d2cace06c7ee02cd6"
+      },
+      {
+        "path": "data/raw/irish5g/Download/Driving/B_2020.02.14_09.38.22.csv",
+        "md5": "7f2fadf98d70648813d408dd120c0035"
+      },
+      {
+        "path": "data/raw/irish5g/Download/Driving/B_2020.02.14_12.58.17.csv",
+        "md5": "be60c7d16e47eb7873472c2494c7219d"
+      },
+      {
+        "path": "data/raw/irish5g/Download/Driving/B_2020.02.27_17.30.15.csv",
+        "md5": "cec2dbe7fe6ba0d5386cc818ada7c892"
+      },
+      {
+        "path": "data/raw/irish5g/Download/Driving/B_2020.02.27_20.35.57.csv",
+        "md5": "3e2db9c01428851005a741b9b21d2806"
+      },
+      {
+        "path": "data/raw/irish5g/Download/Static/B_2019.12.16_13.40.04.csv",
+        "md5": "16ca776b67fd205f97d20dca092f96c1"
+      },
+      {
+        "path": "data/raw/irish5g/Download/Static/B_2020.01.16_10.43.34.csv",
+        "md5": "763856bf795095f3342d8eb3f6714a64"
+      },
+      {
+        "path": "data/raw/irish5g/Download/Static/B_2020.02.13_13.57.29.csv",
+        "md5": "a1ade1857524e99027c37f29038b75a1"
+      },
+      {
+        "path": "data/raw/irish5g/Download/Static/B_2020.02.14_13.21.26.csv",
+        "md5": "3c11dbc2eb538fce25508681afcdb75a"
+      },
+      {
+        "path": "data/raw/irish5g/Download/Static/B_2020.02.27_18.39.27.csv",
+        "md5": "7dda963e07a8fbb963c62136a41f46fd"
+      }
+    ],
+    "unit_conversion": "DL_bitrate x 0.001 -> Mbit/s",
+    "cleaning": {
+      "max_gap_s": 3,
+      "min_trace_s": 120,
+      "fill_short_gaps": "linear interpolation over gaps of at most max_gap_s seconds; longer gaps split the trace"
+    },
+    "status_column": "NetworkMode",
+    "status_share": {
+      "5G": 0.6845,
+      "LTE": 0.213,
+      "HSPA+": 0.1004,
+      "HSDPA": 0.0009,
+      "HSUPA": 0.0009,
+      "UMTS": 0.0002
+    },
+    "traces": 21,
+    "hours": 12.713,
+    "length_s": {
+      "min": 387,
+      "median": 2090,
+      "max": 6654
+    },
+    "mbps": {
+      "mean": 44.88,
+      "median": 14.57,
+      "p10": 0.69,
+      "p90": 160.58,
+      "max": 532.9,
+      "share_below_1": 0.1108
+    },
+    "by_prefix": {
+      "Driving": {
+        "traces": 16,
+        "hours": 7.931,
+        "mean_mbps": 29.31,
+        "median_mbps": 8.93
+      },
+      "Static": {
+        "traces": 5,
+        "hours": 4.782,
+        "mean_mbps": 70.7,
+        "median_mbps": 36.29
+      }
+    }
+  }
+}

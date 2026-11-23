@@ -1,0 +1,14 @@
+method,J0 (mean),seed s.d.,freeze s/session,mean quality level,worst 5% of sessions (J0),budget (s/chunk),final λ,DARA-L minus this [95% CI],verdict
+DARA-L (ours),287.5,5.1,17.4,3.62,91,0.157,2.86,,
+"PPO-Lagrangian, 0.25 s",290.5,5.9,25.4,3.75,94,0.25,1.20,"-3.0 [-9.6, +3.7]",unclear
+"PPO-Lagrangian, 0.5 s",285.4,7.2,33.7,3.80,95,0.5,0.02,"+2.1 [-7.1, +11.0]",unclear
+"PPO-Lagrangian, 1 s",285.8,6.0,34.1,3.81,93,1,0.00,"+1.7 [-7.1, +10.2]",unclear
+"Plain PPO, cap 0.1 (original reward)",284.9,7.6,33.8,3.79,96,,,"+2.6 [-6.8, +11.8]",unclear
+"Plain PPO, cap 0.25",285.4,4.8,33.5,3.79,93,,,"+2.1 [-6.0, +10.1]",unclear
+"Plain PPO, cap 0.5",285.6,7.4,33.8,3.80,93,,,"+1.9 [-7.4, +11.0]",unclear
+"Plain PPO, cap 1",290.1,5.7,33.8,3.88,90,,,"-2.6 [-10.7, +5.5]",unclear
+"Plain PPO, no cap",286.9,5.0,29.3,3.75,92,,,"+0.6 [-6.3, +7.3]",unclear
+COREL,260.0,7.6,9.2,3.24,65,,,"+27.5 [+18.7, +37.4]",DARA-L better
+Pensieve,259.4,18.1,11.0,3.26,65,,,"+28.1 [+14.0, +44.9]",DARA-L better
+RobustMPC,223.2,,6.1,,68,,,"+64.3 [+55.8, +73.3]",DARA-L better
+Always quality 4 (best fixed),292.7,,38.2,,58,,,"-5.1 [-13.3, +2.9]",unclear

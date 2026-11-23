@@ -1,0 +1,56 @@
+trained methods: ['corel_official', 'dara_online', 'dara_online_lag', 'pensieve_official', 'ppo_lagrangian_t0.5']  seeds: [101, 202, 303, 404, 505]
+conditions: ['seen/x1', 'seen/x4', 'seen/x8', 'lumos5g/x1', 'lumos5g/x4', 'lumos5g/x8', 'irish_static/x1', 'irish_static/x4', 'irish_static/x8', 'irish_driving/x1', 'irish_driving/x4', 'irish_driving/x8']
+
+== mean J0 per test condition (trained policies: mean over seeds; reference policies: deterministic) ==
+condition            seen/x1  seen/x4  seen/x8  lumos5g/x1  lumos5g/x4  lumos5g/x8  irish_static/x1  irish_static/x4  irish_static/x8  irish_driving/x1  irish_driving/x4  irish_driving/x8
+method                                                                                                                                                                                     
+corel_official         255.9    174.7    130.4       282.1       223.8       182.0            168.0             84.0             36.0              41.1            -198.7            -577.4
+dara_online            292.4    158.1     65.6       299.6       260.9       210.5            208.9              5.5           -136.0            -283.2           -1191.0           -1978.0
+dara_online_lag        271.5    188.7    130.6       277.7       229.0       188.4            209.0            117.0             46.2              32.7            -365.9           -1011.9
+pensieve_official      213.1    145.6    100.9       231.7       179.9       137.2            146.0             83.6             33.1              39.5            -223.1            -568.7
+ppo_lagrangian_t0.5    275.3    192.1    128.9       282.3       237.8       192.2            203.9            110.4             27.0             -60.5            -962.0           -2312.2
+robustmpc              223.2    147.1    104.9       269.1       223.2       184.6            196.2            108.5             55.0              98.4            -151.3            -495.1
+tier0                   80.5     77.3     67.8        74.7        74.2        73.5             62.1             53.9             28.9              33.1            -170.4            -499.8
+tier1                  157.4    145.0    112.8       145.8       144.8       142.3            130.6             99.2             21.1              48.3            -426.4           -1103.0
+tier2                  212.6    170.3     87.7       198.8       195.6       182.3            178.2             73.9           -113.8             -46.1           -1042.6           -2420.7
+tier3                  259.5    143.8    -29.7       251.2       235.2       190.2            204.9            -59.8           -518.2            -320.5           -2375.1           -5195.4
+tier4                  292.7     57.9   -273.8       303.1       252.3       162.6            194.4           -381.4          -1346.6            -834.7           -4690.3           -9947.2
+
+== dara_online_lag minus each alternative per condition (+ better, - worse, = no significant difference, ? tests disagree; BH over the pre-registered comparators, separately over the others) ==
+comparison       corel_official pensieve_official robustmpc ppo_lagrangian_t0.5 dara_online
+condition                                                                                  
+seen/x1                   15.6?             58.4+     48.3+               -3.8?      -20.9-
+seen/x4                   14.0?             43.1+     41.6+               -3.4?       30.6?
+seen/x8                    0.2=             29.7+     25.7+                1.8?       65.0+
+lumos5g/x1                -4.4?             46.0+      8.6?               -4.6?      -21.9-
+lumos5g/x4                 5.1=             49.1+      5.7?               -8.8?      -31.9-
+lumos5g/x8                 6.4=             51.2+      3.8=               -3.9?      -22.1-
+irish_static/x1           41.1+             63.0+     12.9+                5.1?        0.1?
+irish_static/x4           33.0+             33.4+      8.5+                6.7?      111.5+
+irish_static/x8           10.2?             13.1?     -8.8?               19.2?      182.2+
+irish_driving/x1          -8.4?             -6.8=    -65.7-               93.2+      315.9+
+irish_driving/x4        -167.2-           -142.7-   -214.5-              596.1+      825.1+
+irish_driving/x8        -434.5-           -443.3-   -516.8-             1300.3+      966.1+
+
+== summary over unseen conditions ==
+           conditions          comparison  mean_diff  better  worse  no_difference  disagree    n
+           all unseen      corel_official      -45.7     2.0    2.0            3.0       4.0 11.0
+           all unseen         dara_online      215.4     6.0    4.0            0.0       1.0 11.0
+           all unseen   pensieve_official      -22.6     7.0    2.0            1.0       1.0 11.0
+           all unseen ppo_lagrangian_t0.5      181.9     3.0    0.0            0.0       8.0 11.0
+           all unseen           robustmpc      -62.9     4.0    3.0            1.0       3.0 11.0
+     Synthetic mmWave      corel_official        7.9     0.0    0.0            1.0       1.0  2.0
+     Synthetic mmWave         dara_online       22.1     1.0    1.0            0.0       0.0  2.0
+     Synthetic mmWave   pensieve_official       44.1     2.0    0.0            0.0       0.0  2.0
+     Synthetic mmWave ppo_lagrangian_t0.5       -1.0     0.0    0.0            0.0       2.0  2.0
+     Synthetic mmWave           robustmpc       37.0     2.0    0.0            0.0       0.0  2.0
+Real mmWave (Lumos5G)      corel_official        2.4     0.0    0.0            2.0       1.0  3.0
+Real mmWave (Lumos5G)         dara_online      -25.3     0.0    3.0            0.0       0.0  3.0
+Real mmWave (Lumos5G)   pensieve_official       48.8     3.0    0.0            0.0       0.0  3.0
+Real mmWave (Lumos5G) ppo_lagrangian_t0.5       -5.8     0.0    0.0            0.0       3.0  3.0
+Real mmWave (Lumos5G)           robustmpc        6.1     0.0    0.0            1.0       2.0  3.0
+Non-mmWave 5G (Irish)      corel_official      -87.6     2.0    2.0            0.0       2.0  6.0
+Non-mmWave 5G (Irish)         dara_online      400.1     5.0    0.0            0.0       1.0  6.0
+Non-mmWave 5G (Irish)   pensieve_official      -80.6     2.0    2.0            1.0       1.0  6.0
+Non-mmWave 5G (Irish) ppo_lagrangian_t0.5      336.8     3.0    0.0            0.0       3.0  6.0
+Non-mmWave 5G (Irish)           robustmpc     -130.7     2.0    3.0            0.0       1.0  6.0

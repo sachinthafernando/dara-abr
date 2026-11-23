@@ -1,0 +1,19 @@
+\begin{table}[t]\centering\footnotesize
+\caption{DARA-L minus each method, mean $J_0$ per session on unseen conditions. + / $-$: significantly better / worse (session $q<0.05$ and bootstrap CI excluding 0); =: no significant difference; ?: the two tests disagree.}
+\label{tab:generalisation}
+\begin{tabular}{llrrrr}\toprule
+Network & Ladder & COREL & Pensieve & RobustMPC & PPO-Lagrangian, 0.5 s \\\midrule
+Training generator & $\times$1 & +15.6? & +58.4+ & +48.3+ & $-$3.8? \\
+Training generator (training) & $\times$4 & +14.0? & +43.1+ & +41.6+ & $-$3.4? \\
+Training generator & $\times$8 & +0.2= & +29.7+ & +25.7+ & +1.8? \\
+Lumos5G & $\times$1 & $-$4.4? & +46.0+ & +8.6? & $-$4.6? \\
+Lumos5G & $\times$4 & +5.1= & +49.1+ & +5.7? & $-$8.8? \\
+Lumos5G & $\times$8 & +6.4= & +51.2+ & +3.8= & $-$3.9? \\
+Irish 5G static & $\times$1 & +41.1+ & +63.0+ & +12.9+ & +5.1? \\
+Irish 5G static & $\times$4 & +33.0+ & +33.4+ & +8.5+ & +6.7? \\
+Irish 5G static & $\times$8 & +10.2? & +13.1? & $-$8.8? & +19.2? \\
+Irish 5G driving & $\times$1 & $-$8.4? & $-$6.8= & $-$65.7$-$ & +93.2+ \\
+Irish 5G driving & $\times$4 & $-$167.2$-$ & $-$142.7$-$ & $-$214.5$-$ & +596.1+ \\
+Irish 5G driving & $\times$8 & $-$434.5$-$ & $-$443.3$-$ & $-$516.8$-$ & +1300.3+ \\
+\bottomrule\end{tabular}
+\end{table}

@@ -1,0 +1,29 @@
+lumos5g: 118 traces, 18.922 h -> data/processed/lumos5g.npz  (0.6s)
+  {"Driving": {"traces": 46, "hours": 3.106, "mean_mbps": 343.29, "median_mbps": 124.0}, "Walking": {"traces": 72, "hours": 15.815, "mean_mbps": 555.5, "median_mbps": 505.0}}
+irish5g: 21 traces, 12.713 h -> data/processed/irish5g_download.npz  (0.4s)
+  {"Driving": {"traces": 16, "hours": 7.931, "mean_mbps": 29.31, "median_mbps": 8.93}, "Static": {"traces": 5, "hours": 4.782, "mean_mbps": 70.7, "median_mbps": 36.29}}
+manifest: data/processed/MANIFEST.json
+
+comparison with ../../ph2_l/irish5g_download.npz: 0/21 traces identical; only in old: 0, only in new: 0
+                        trace  in_old  in_new  len_old  len_new  mean_old  mean_new  identical
+Driving_B_2019.12.14_10.16.30    True    True     1014     1163     10.23     10.08      False
+Driving_B_2019.12.16_07.22.43    True    True     2283     2597     24.97     24.57      False
+Driving_B_2019.12.16_11.49.59    True    True      342      394      7.58      7.67      False
+Driving_B_2019.12.16_12.27.05    True    True     1181     1352     26.41     26.41      False
+Driving_B_2019.12.16_14.23.32    True    True     2592     2950     61.22     60.57      False
+Driving_B_2019.12.17_07.32.39    True    True     2295     2625     26.38     26.13      False
+Driving_B_2020.01.16_07.26.43    True    True     1756     2090      9.80      9.84      False
+Driving_B_2020.01.16_09.56.56    True    True     1536     1825     42.47     41.96      False
+Driving_B_2020.01.16_12.10.03    True    True      340      387    130.52    128.97      False
+Driving_B_2020.02.13_13.03.24    True    True     2226     2668      7.37      7.40      False
+Driving_B_2020.02.13_15.02.01    True    True     3186     3777     38.59     38.57      False
+Driving_B_2020.02.14_07.29.00    True    True     1912     2271     31.84     32.06      False
+Driving_B_2020.02.14_09.38.22    True    True     1453     1719     33.98     34.36      False
+Driving_B_2020.02.14_12.58.17    True    True      844      997      4.70      4.74      False
+Driving_B_2020.02.27_17.30.15    True    True      752      886      3.05      3.09      False
+Driving_B_2020.02.27_20.35.57    True    True      734      850     27.26     27.55      False
+ Static_B_2019.12.16_13.40.04    True    True     1983     2282     53.91     54.08      False
+ Static_B_2020.01.16_10.43.34    True    True     3080     3680     72.79     72.48      False
+ Static_B_2020.02.13_13.57.29    True    True     2920     3498     46.17     46.36      False
+ Static_B_2020.02.14_13.21.26    True    True      939     1103    128.90    128.67      False
+ Static_B_2020.02.27_18.39.27    True    True     5568     6654     79.06     78.61      False

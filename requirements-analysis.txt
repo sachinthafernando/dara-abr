@@ -1,0 +1,6 @@
+# Level 1 (inspect the shipped results, run the tests): no PyTorch needed.
+numpy>=1.24
+pandas>=1.5
+scipy>=1.10
+matplotlib>=3.4
+pytest>=7

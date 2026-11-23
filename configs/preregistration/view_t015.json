@@ -1,0 +1,243 @@
+{
+  "name": "DARA-ABR paper evaluation, v2 (extends v1) | VIEW: act threshold 0.15 (post-hoc sensitivity analysis)",
+  "frozen_on": "2026-10-15",
+  "frozen_before": "any run of set 1 (ct1, ct2 additions, ct8) and set 2 (cth4 additions, ctd1, ctl); after the first five-seed batch (v1), whose results motivated this extension",
+  "note": "All v1 rules stand. v2 adds two sets of training environments. Rules below decide what is claimed; changing them after results exist is reported as a deviation.",
+  "seeds": [
+    101,
+    202,
+    303,
+    404,
+    505
+  ],
+  "primary_training_environment": "ct4",
+  "proposed_method": "dara_online_lag",
+  "evaluation": {
+    "sessions": 100,
+    "eval_seed": 99,
+    "score": "J0 = sum over chunks of q(tier) - 1.075 * freeze_s - |q(tier_t) - q(tier_t-1)|, q = (1.00, 1.92, 2.61, 3.30, 4.00); uncapped, unclipped",
+    "policy_action": "greedy (argmax of the policy)",
+    "checkpoint": "DARA-L, DARA and PPO variants: final policy. Pensieve and COREL: best validation checkpoint, as in their released code"
+  },
+  "comparisons": {
+    "training_environment": {
+      "family": "training",
+      "against": [
+        "corel_official",
+        "pensieve_official",
+        "robustmpc",
+        "best_single_tier",
+        "dara_online",
+        "fixed",
+        "static_best",
+        "ppo_lagrangian_t0.25",
+        "ppo_lagrangian_t0.5",
+        "ppo_lagrangian_t1",
+        "ppo_lagrangian_t2"
+      ]
+    },
+    "generalisation": {
+      "family": "generalisation",
+      "against": [
+        "corel_official",
+        "pensieve_official",
+        "robustmpc",
+        "ppo_lagrangian_t0.5"
+      ]
+    }
+  },
+  "statistics": {
+    "alpha": 0.05,
+    "session_level": "Wilcoxon signed-rank on per-session J0 averaged over each method's seeds",
+    "seed_level": "Welch t-test on per-seed mean J0",
+    "hierarchical": {
+      "method": "bootstrap, seeds resampled within each method, sessions resampled jointly",
+      "n_boot": 10000,
+      "level": 0.95
+    },
+    "multiple_comparisons": "Benjamini-Hochberg within each family",
+    "claim_rule": "'better' or 'worse' only if session-level q < alpha AND the bootstrap interval excludes 0; neither: 'no significant difference'; exactly one: 'inconclusive (tests disagree)'. Seed-level p is reported alongside, never used alone."
+  },
+  "budget_rule_test": {
+    "rule": "DARA-L J0 within 5% of the J0 of the best hand-picked budget on the same environment",
+    "tolerance_rel": 0.05,
+    "primary": "ct4",
+    "secondary_table_only": [
+      "ct2",
+      "cth4",
+      "cts1"
+    ]
+  },
+  "generalisation": {
+    "networks": [
+      "seen",
+      "lumos5g",
+      "irish_static",
+      "irish_driving"
+    ],
+    "contents": [
+      "x4",
+      "x1",
+      "x8"
+    ],
+    "figure": {
+      "networks": [
+        "seen",
+        "lumos5g"
+      ],
+      "contents": [
+        "x1",
+        "x4",
+        "x8"
+      ],
+      "exclude": [
+        "seen/x4"
+      ],
+      "rationale": "The paper is about 5G mmWave. The figure shows mmWave networks only: the training generator with unseen chunk-size ladders, and real mmWave traces (Lumos5G). seen/x4 is the training condition, reported in Table I."
+    },
+    "table": {
+      "networks": [
+        "seen",
+        "lumos5g",
+        "irish_static",
+        "irish_driving"
+      ],
+      "rationale": "All tested conditions are reported in a table, including both Irish 5G sets (commercial mid-band 5G, not mmWave) as a stress test outside the training distribution."
+    },
+    "caveats": [
+      "Lumos5G is the dataset the network generator was calibrated on; it is real-trace evidence, not an independent network.",
+      "COREL receives the near-true throughput 0, 1, 3 and 6 s ahead (+/-16% noise), as in its released simulator, on every test network."
+    ]
+  },
+  "figures_from_primary_environment_only": false,
+  "dropped_from_previous_design": {
+    "networks": [
+      "gen_harsh",
+      "gen_half"
+    ],
+    "contents": [
+      "x4_bursty"
+    ],
+    "reason": "synthetic stress tests replaced by real traces (Lumos5G); still available in the notebook"
+  },
+  "sets": {
+    "set1": {
+      "description": "mmWave generator with four chunk-size ladders",
+      "envs": [
+        "ct1",
+        "ct2",
+        "ct4",
+        "ct8"
+      ],
+      "methods": [
+        "dara_online_lag",
+        "ppo_lagrangian_t0.25",
+        "ppo_lagrangian_t0.5",
+        "ppo_lagrangian_t1",
+        "corel_official",
+        "pensieve_official",
+        "fixed",
+        "cap0.25",
+        "cap0.5",
+        "cap1",
+        "static_best"
+      ],
+      "extra": {
+        "ct1": [
+          "dara_online_lag_m015"
+        ]
+      },
+      "against": [
+        "ppo_lagrangian_t0.25",
+        "ppo_lagrangian_t0.5",
+        "ppo_lagrangian_t1",
+        "corel_official",
+        "pensieve_official",
+        "fixed",
+        "cap0.25",
+        "cap0.5",
+        "cap1",
+        "static_best",
+        "robustmpc",
+        "best_single_tier",
+        "dara_online_lag_m015"
+      ]
+    },
+    "set2": {
+      "description": "harsh and real networks",
+      "envs": [
+        "cth4",
+        "ctd1",
+        "ctl"
+      ],
+      "methods": [
+        "dara_online_lag",
+        "ppo_lagrangian_t0.5",
+        "corel_official",
+        "pensieve_official"
+      ],
+      "against": [
+        "ppo_lagrangian_t0.5",
+        "corel_official",
+        "pensieve_official",
+        "robustmpc",
+        "best_single_tier"
+      ]
+    },
+    "set3": {
+      "description": "unseen networks for the ct4 models: the v1 generalisation test, unchanged (no new runs)"
+    }
+  },
+  "held_out_traces": {
+    "ctd1": {
+      "trace_file": "data/processed/irish5g_download.npz",
+      "prefix": "Driving",
+      "frac": 0.25,
+      "seed": 7,
+      "expected": "4 of 16"
+    },
+    "ctl": {
+      "trace_file": "data/processed/lumos5g.npz",
+      "prefix": "",
+      "frac": 0.2,
+      "seed": 7,
+      "stratified_by": "name prefix (Walking/Driving)"
+    },
+    "rule": "held-out traces are used only by the final 100 test sessions; training, BC data, DARA's diagnostic states and learning gate, and COREL/Pensieve validation use only the training traces",
+    "not_held_out": "cts1 (5 traces) and the mmWave generator (fresh sessions); their test results are in-distribution"
+  },
+  "act_threshold": {
+    "primary": 0.15,
+    "sensitivity": {
+      "value": 0.15,
+      "where": "ct1 only, the only set-1 environment with 0.15 <= M < 0.2 (M = 0.164)",
+      "method": "dara_online_lag_m015"
+    }
+  },
+  "families": "Benjamini-Hochberg within each training environment, separately for registered comparisons (set 'against' lists) and any other comparison",
+  "claims": {
+    "C1_diagnosis_predicts_failure": "Over the set-1 reward settings (4 ladders x caps 0.1/0.25/0.5/1/no cap, plus caps 2 and 5 on ct4), M before training is positively rank-correlated with the trained shortfall (best single tier J0 - trained J0) / |best single tier J0|: Spearman rho > 0 with a 95% bootstrap interval (seeds resampled within each setting) excluding 0.",
+    "C2_no_false_alarm": "On ct1 (M = 0.164 < 0.2) DARA does not act in any seed, and DARA-L is not significantly worse than any hand-picked budget there.",
+    "C3_budget_rule": "In every environment where DARA acts in all seeds and at least 3 hand budgets were trained (ct2, ct4, ct8, cth4), DARA-L's J0 is within 5% of the best hand budget. Reported as passes k of n; no environment is dropped.",
+    "C4_vs_fixed_budget": "Per environment (all 7), DARA-L vs PPO-Lagrangian 0.5 s: verdict reported for each (better / worse / no significant difference / tests disagree).",
+    "C5_baselines": "Per environment, DARA-L vs COREL, Pensieve and RobustMPC: verdicts reported; no pass rule."
+  },
+  "figures": {
+    "set1_ladder_figures": [
+      "fig_diagnosis_ladders (C1)",
+      "fig_budget_ladders (C3)"
+    ],
+    "other_figures": "as v1 (primary environment)"
+  },
+  "deviation": "DARA's act threshold is lowered from 0.2 to 0.15 after the results were seen. Environments with 0.15 <= M < 0.2 use the dara_online_lag_m015 runs as DARA-L.",
+  "view_log": [
+    "ct1: M = 0.164: DARA-L replaced by dara_online_lag_m015 (5 seeds)",
+    "ct2: M = 0.325: unchanged (DARA acts the same at 0.15 and 0.2)",
+    "ct4: M = 0.569: unchanged (DARA acts the same at 0.15 and 0.2)",
+    "ct8: M = 0.747: unchanged (DARA acts the same at 0.15 and 0.2)",
+    "ctd1: M = 0.847: unchanged (DARA acts the same at 0.15 and 0.2)",
+    "cth4: M = 0.783: unchanged (DARA acts the same at 0.15 and 0.2)",
+    "ctl: M = 0.231: unchanged (DARA acts the same at 0.15 and 0.2)",
+    "cts1: M = 0.369: unchanged (DARA acts the same at 0.15 and 0.2)"
+  ]
+}

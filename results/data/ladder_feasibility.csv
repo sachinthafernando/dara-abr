@@ -1,0 +1,46 @@
+network,ladder,tier0_3Mbps,tier1_6Mbps,tier2_12Mbps,tier3_24Mbps,tier4_44Mbps,tier0_12Mbps,tier1_24Mbps,tier2_48Mbps,tier3_96Mbps,tier4_176Mbps,tier0_24Mbps,tier1_48Mbps,tier2_96Mbps,tier3_192Mbps,tier4_352Mbps
+generator: training mix,x1,0.901,0.895,0.859,0.727,0.64,,,,,,,,,,
+generator: training mix,x4,,,,,,0.859,0.727,0.63,0.541,0.348,,,,,
+generator: training mix,x8,,,,,,,,,,,0.727,0.63,0.541,0.341,0.31
+generator: urban_pedestrian,x1,0.884,0.882,0.853,0.695,0.601,,,,,,,,,,
+generator: urban_pedestrian,x4,,,,,,0.853,0.695,0.596,0.521,0.285,,,,,
+generator: urban_pedestrian,x8,,,,,,,,,,,0.695,0.596,0.521,0.281,0.26
+generator: urban_driving,x1,0.918,0.911,0.865,0.724,0.624,,,,,,,,,,
+generator: urban_driving,x4,,,,,,0.865,0.724,0.612,0.5,0.283,,,,,
+generator: urban_driving,x8,,,,,,,,,,,0.724,0.612,0.5,0.274,0.236
+generator: urban_canyon,x1,0.926,0.921,0.853,0.593,0.425,,,,,,,,,,
+generator: urban_canyon,x4,,,,,,0.853,0.593,0.414,0.326,0.115,,,,,
+generator: urban_canyon,x8,,,,,,,,,,,0.593,0.414,0.326,0.11,0.095
+generator: motorway,x1,0.926,0.902,0.865,0.803,0.755,,,,,,,,,,
+generator: motorway,x4,,,,,,0.865,0.803,0.728,0.586,0.419,,,,,
+generator: motorway,x8,,,,,,,,,,,0.803,0.728,0.586,0.402,0.315
+generator: tunnel,x1,0.669,0.66,0.585,0.306,0.124,,,,,,,,,,
+generator: tunnel,x4,,,,,,0.585,0.306,0.111,0.063,0.013,,,,,
+generator: tunnel,x8,,,,,,,,,,,0.306,0.111,0.063,0.011,0.006
+generator: under_bridge,x1,0.833,0.82,0.787,0.709,0.651,,,,,,,,,,
+generator: under_bridge,x4,,,,,,0.787,0.709,0.638,0.527,0.331,,,,,
+generator: under_bridge,x8,,,,,,,,,,,0.709,0.638,0.527,0.32,0.273
+generator: crowded_stationary,x1,0.877,0.876,0.845,0.656,0.544,,,,,,,,,,
+generator: crowded_stationary,x4,,,,,,0.845,0.656,0.538,0.466,0.223,,,,,
+generator: crowded_stationary,x8,,,,,,,,,,,0.656,0.538,0.466,0.219,0.2
+generator: suburban_open,x1,0.985,0.985,0.979,0.952,0.937,,,,,,,,,,
+generator: suburban_open,x4,,,,,,0.979,0.952,0.936,0.902,0.779,,,,,
+generator: suburban_open,x8,,,,,,,,,,,0.952,0.936,0.902,0.777,0.757
+Lumos5G: all,x1,0.968,0.958,0.943,0.922,0.899,,,,,,,,,,
+Lumos5G: all,x4,,,,,,0.943,0.922,0.895,0.819,0.598,,,,,
+Lumos5G: all,x8,,,,,,,,,,,0.922,0.895,0.819,0.591,0.532
+Lumos5G: driving,x1,0.973,0.966,0.952,0.923,0.89,,,,,,,,,,
+Lumos5G: driving,x4,,,,,,0.952,0.923,0.885,0.766,0.443,,,,,
+Lumos5G: driving,x8,,,,,,,,,,,0.923,0.885,0.766,0.433,0.347
+Lumos5G: walking,x1,0.967,0.956,0.941,0.922,0.901,,,,,,,,,,
+Lumos5G: walking,x4,,,,,,0.941,0.922,0.897,0.83,0.628,,,,,
+Lumos5G: walking,x8,,,,,,,,,,,0.922,0.897,0.83,0.622,0.569
+Irish 5G: all,x1,0.811,0.712,0.545,0.348,0.262,,,,,,,,,,
+Irish 5G: all,x4,,,,,,0.545,0.348,0.252,0.164,0.084,,,,,
+Irish 5G: all,x8,,,,,,,,,,,0.348,0.252,0.164,0.069,0.002
+Irish 5G: driving,x1,0.766,0.623,0.396,0.211,0.144,,,,,,,,,,
+Irish 5G: driving,x4,,,,,,0.396,0.211,0.14,0.099,0.043,,,,,
+Irish 5G: driving,x8,,,,,,,,,,,0.211,0.14,0.099,0.037,0.003
+Irish 5G: static,x1,0.887,0.86,0.792,0.577,0.458,,,,,,,,,,
+Irish 5G: static,x4,,,,,,0.792,0.577,0.438,0.272,0.153,,,,,
+Irish 5G: static,x8,,,,,,,,,,,0.577,0.438,0.272,0.122,0.0

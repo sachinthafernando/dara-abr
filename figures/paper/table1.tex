@@ -1,0 +1,23 @@
+\begin{table*}[t]
+\centering
+\caption{Training environments: misalignment before training, DARA's decision and derived budget, and QoE $J_0$ after training.}
+\label{tab:envs}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrr}
+\toprule
+Training environment & $M$ & Budget & \multicolumn{4}{c}{Mean $J_0$ per session} \\
+\cmidrule(lr){4-7}
+ & & (s/chunk) & PPO, orig.\ reward & DARA-L & Best hand-picked (budget) & RobustMPC \\
+\midrule
+mmWave generator $\times$1 & 0.16 & 0.16 & 284.9{\tiny$\,\pm$7.6} & 287.5{\tiny$\,\pm$5.1} & \textbf{290.5{\tiny$\,\pm$5.9} (0.25)} & 223.2 \\
+Lumos5G (real) $\times$4 & 0.23 & 0.14 & -- & \textbf{253.8{\tiny$\,\pm$2.5}} & 232.4{\tiny$\,\pm$1.4} (0.5)$^\dagger$ & 219.5 \\
+mmWave generator $\times$2 & 0.33 & 0.23 & 220.5{\tiny$\,\pm$2.8} & 238.1{\tiny$\,\pm$8.8} & \textbf{247.9{\tiny$\,\pm$4.1} (0.25)} & 186.7 \\
+Irish 5G static $\times$1 & 0.37 & 0.33 & -- & 220.9{\tiny$\,\pm$6.3} & \textbf{226.9{\tiny$\,\pm$4.5} (0.5)} & 196.2 \\
+mmWave generator $\times$4 & 0.57 & 0.38 & 65.9{\tiny$\,\pm$9.3} & 188.7{\tiny$\,\pm$4.6} & \textbf{192.1{\tiny$\,\pm$3.6} (0.5)} & 147.1 \\
+Harsh mmWave $\times$4 & 0.78 & 0.45 & -- & 99.8{\tiny$\,\pm$11.2} & \textbf{136.9{\tiny$\,\pm$5.2} (1)} & 95.1 \\
+\bottomrule
+\end{tabular}
+
+\vspace{2pt}\parbox{\textwidth}{\scriptsize Mean $J_0$ per session over 100 shared test sessions; learned methods: mean $\pm$ s.d. over 5 training seeds. $M$: misalignment of the training reward, measured before training. DARA switched the freeze constraint on in 5/5 seeds in every environment, during training (between episodes 2000 and 5000). Best hand-picked: the best of the PPO-Lagrangian budgets trained in that environment, chosen afterwards on the test sessions (an oracle choice; 3--4 budgets, each a full training run). Bold: best learned method in the row. $^\dagger$: only one hand-picked budget (0.5 s) was trained there. --: not trained.}
+\end{table*}

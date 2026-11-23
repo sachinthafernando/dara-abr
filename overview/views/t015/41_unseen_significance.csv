@@ -1,0 +1,49 @@
+condition,method,diff,ci_lo,ci_hi,share_sessions_better,q_session,p_seed,verdict
+seen/x1,COREL,15.6399,-13.8108,46.4439,0.74,0.0,0.3973,inconclusive (tests disagree)
+seen/x1,Pensieve,58.3934,33.709,81.0027,0.99,0.0,0.004,DARA-L better
+seen/x1,RobustMPC,48.2694,36.6166,60.3583,0.95,0.0,,DARA-L better
+seen/x1,"PPO-Lagrangian, 0.5 s budget",-3.8104,-18.7419,11.2561,0.2,0.0,0.6666,inconclusive (tests disagree)
+seen/x4,COREL,14.033,-3.7992,33.1079,0.73,0.0,0.2371,inconclusive (tests disagree)
+seen/x4,Pensieve,43.1001,27.1804,60.4731,0.96,0.0,0.0066,DARA-L better
+seen/x4,RobustMPC,41.5758,33.8701,49.5929,0.87,0.0,,DARA-L better
+seen/x4,"PPO-Lagrangian, 0.5 s budget",-3.4032,-9.2812,1.8744,0.24,0.0,0.2337,inconclusive (tests disagree)
+seen/x8,COREL,0.2126,-10.4649,11.5822,0.56,0.5566,0.9696,no significant difference
+seen/x8,Pensieve,29.7313,16.3262,44.0686,0.87,0.0,0.0103,DARA-L better
+seen/x8,RobustMPC,25.7081,17.6175,33.9278,0.82,0.0,,DARA-L better
+seen/x8,"PPO-Lagrangian, 0.5 s budget",1.7563,-7.263,13.1508,0.3,0.002,0.6993,inconclusive (tests disagree)
+lumos5g/x1,COREL,-4.3747,-26.3852,17.9259,0.33,0.0004,0.7341,inconclusive (tests disagree)
+lumos5g/x1,Pensieve,46.0393,26.7055,65.4391,1.0,0.0,0.003,DARA-L better
+lumos5g/x1,RobustMPC,8.584,-7.9053,23.3565,0.58,0.0013,,inconclusive (tests disagree)
+lumos5g/x1,"PPO-Lagrangian, 0.5 s budget",-4.6122,-25.1483,16.6913,0.09,0.0,0.7092,inconclusive (tests disagree)
+lumos5g/x4,COREL,5.1237,-12.8223,24.103,0.56,0.1613,0.6408,no significant difference
+lumos5g/x4,Pensieve,49.0865,37.4451,62.7346,0.98,0.0,0.0002,DARA-L better
+lumos5g/x4,RobustMPC,5.7456,-1.102,12.6813,0.56,0.0161,,inconclusive (tests disagree)
+lumos5g/x4,"PPO-Lagrangian, 0.5 s budget",-8.8284,-17.8979,0.8235,0.07,0.0,0.1366,inconclusive (tests disagree)
+lumos5g/x8,COREL,6.4048,-9.502,22.7212,0.57,0.0578,0.4843,no significant difference
+lumos5g/x8,Pensieve,51.2178,32.9625,69.3393,0.98,0.0,0.003,DARA-L better
+lumos5g/x8,RobustMPC,3.8383,-4.1533,11.0046,0.51,0.2475,,no significant difference
+lumos5g/x8,"PPO-Lagrangian, 0.5 s budget",-3.8524,-17.885,12.4847,0.29,0.0,0.67,inconclusive (tests disagree)
+irish_static/x1,COREL,41.0547,5.5293,78.2371,0.91,0.0,0.1138,DARA-L better
+irish_static/x1,Pensieve,62.9825,29.2052,95.5483,1.0,0.0,0.0246,DARA-L better
+irish_static/x1,RobustMPC,12.8585,6.2926,20.3366,0.8,0.0,,DARA-L better
+irish_static/x1,"PPO-Lagrangian, 0.5 s budget",5.0915,-14.8867,33.8493,0.59,0.0057,0.7379,inconclusive (tests disagree)
+irish_static/x4,COREL,33.0118,13.0284,53.5942,0.92,0.0,0.0361,DARA-L better
+irish_static/x4,Pensieve,33.4164,17.9674,50.2923,0.92,0.0,0.0117,DARA-L better
+irish_static/x4,RobustMPC,8.5497,1.1803,15.7859,0.74,0.0,,DARA-L better
+irish_static/x4,"PPO-Lagrangian, 0.5 s budget",6.6789,-3.2058,17.2293,0.59,0.0082,0.2377,inconclusive (tests disagree)
+irish_static/x8,COREL,10.2166,-7.3419,24.577,0.67,0.0021,0.2212,inconclusive (tests disagree)
+irish_static/x8,Pensieve,13.1164,-3.2108,26.1051,0.73,0.0,0.1222,inconclusive (tests disagree)
+irish_static/x8,RobustMPC,-8.8057,-24.2385,1.9223,0.43,0.0482,,inconclusive (tests disagree)
+irish_static/x8,"PPO-Lagrangian, 0.5 s budget",19.1743,-3.8089,51.9605,0.64,0.0001,0.1675,inconclusive (tests disagree)
+irish_driving/x1,COREL,-8.3716,-76.659,60.293,0.74,0.0048,0.814,inconclusive (tests disagree)
+irish_driving/x1,Pensieve,-6.8257,-69.773,50.5917,0.68,0.0572,0.8315,no significant difference
+irish_driving/x1,RobustMPC,-65.7312,-123.9821,-22.091,0.38,0.0007,,DARA-L worse
+irish_driving/x1,"PPO-Lagrangian, 0.5 s budget",93.2053,14.5731,196.4827,0.85,0.0,0.0731,DARA-L better
+irish_driving/x4,COREL,-167.1575,-358.2802,-27.3997,0.29,0.0,0.1027,DARA-L worse
+irish_driving/x4,Pensieve,-142.7381,-334.2122,-6.0179,0.32,0.0,0.1485,DARA-L worse
+irish_driving/x4,RobustMPC,-214.5421,-406.2688,-78.381,0.29,0.0,,DARA-L worse
+irish_driving/x4,"PPO-Lagrangian, 0.5 s budget",596.1316,188.6542,1193.8859,0.89,0.0,0.0637,DARA-L better
+irish_driving/x8,COREL,-434.4734,-884.179,-88.2799,0.24,0.0,0.0715,DARA-L worse
+irish_driving/x8,Pensieve,-443.2532,-894.1704,-111.699,0.24,0.0,0.0684,DARA-L worse
+irish_driving/x8,RobustMPC,-516.8155,-964.34,-185.7889,0.16,0.0,,DARA-L worse
+irish_driving/x8,"PPO-Lagrangian, 0.5 s budget",1300.302,352.7423,2632.9732,0.85,0.0,0.0839,DARA-L better

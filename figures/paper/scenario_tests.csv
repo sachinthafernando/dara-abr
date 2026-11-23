@@ -1,0 +1,133 @@
+network,scenario,method,against,value,sessions,mean_difference,p,p_bh,verdict
+grp_walking,Walking,dara_online_lag_m015,ppo_lagrangian_t0.5,J0,100,-7.20231,0.0,0.0,lower
+grp_walking,Walking,dara_online_lag_m015,ppo_lagrangian_t0.5,rebuffer,100,-6.61245,0.0,0.0,lower
+grp_walking,Walking,dara_online_lag_m015,ppo_lagrangian_t0.5,mean_bitrate_mbps,100,-4.86911,0.0,0.0,lower
+grp_walking,Walking,dara_online_lag_m015,corel_official,J0,100,25.53898,0.0,0.0,higher
+grp_walking,Walking,dara_online_lag_m015,corel_official,rebuffer,100,5.21314,0.0,0.0,higher
+grp_walking,Walking,dara_online_lag_m015,corel_official,mean_bitrate_mbps,100,3.5181,0.0,0.0,higher
+grp_walking,Walking,dara_online_lag_m015,pensieve_official,J0,100,27.96368,0.0,0.0,higher
+grp_walking,Walking,dara_online_lag_m015,pensieve_official,rebuffer,100,3.59178,0.0,0.0,higher
+grp_walking,Walking,dara_online_lag_m015,pensieve_official,mean_bitrate_mbps,100,5.36424,0.0,0.0,higher
+grp_walking,Walking,dara_online_lag_m015,robustmpc,J0,100,82.11465,0.0,0.0,higher
+grp_walking,Walking,dara_online_lag_m015,robustmpc,rebuffer,100,8.5994,0.0,0.0,higher
+grp_walking,Walking,dara_online_lag_m015,robustmpc,mean_bitrate_mbps,100,13.42501,0.0,0.0,higher
+grp_driving,Driving,dara_online_lag_m015,ppo_lagrangian_t0.5,J0,100,-1.50336,0.00258,0.00284,lower
+grp_driving,Driving,dara_online_lag_m015,ppo_lagrangian_t0.5,rebuffer,100,-1.76971,0.0,0.0,lower
+grp_driving,Driving,dara_online_lag_m015,ppo_lagrangian_t0.5,mean_bitrate_mbps,100,-2.03313,5e-05,5e-05,lower
+grp_driving,Driving,dara_online_lag_m015,corel_official,J0,100,12.56965,0.0,0.0,higher
+grp_driving,Driving,dara_online_lag_m015,corel_official,rebuffer,100,1.5332,0.0,0.0,higher
+grp_driving,Driving,dara_online_lag_m015,corel_official,mean_bitrate_mbps,100,1.25503,0.14488,0.14825,no difference
+grp_driving,Driving,dara_online_lag_m015,pensieve_official,J0,100,14.71262,0.0,0.0,higher
+grp_driving,Driving,dara_online_lag_m015,pensieve_official,rebuffer,100,1.16348,0.00043,0.00047,higher
+grp_driving,Driving,dara_online_lag_m015,pensieve_official,mean_bitrate_mbps,100,3.06451,0.0,0.0,higher
+grp_driving,Driving,dara_online_lag_m015,robustmpc,J0,100,50.42893,0.0,0.0,higher
+grp_driving,Driving,dara_online_lag_m015,robustmpc,rebuffer,100,2.36853,0.0,0.0,higher
+grp_driving,Driving,dara_online_lag_m015,robustmpc,mean_bitrate_mbps,100,8.66355,0.0,0.0,higher
+grp_deadzone,Dead zone,dara_online_lag_m015,ppo_lagrangian_t0.5,J0,100,31.83516,0.46185,0.47259,no difference
+grp_deadzone,Dead zone,dara_online_lag_m015,ppo_lagrangian_t0.5,rebuffer,100,-57.57274,0.0,0.0,lower
+grp_deadzone,Dead zone,dara_online_lag_m015,ppo_lagrangian_t0.5,mean_bitrate_mbps,100,-10.85758,0.0,0.0,lower
+grp_deadzone,Dead zone,dara_online_lag_m015,corel_official,J0,100,35.79145,0.0,0.0,higher
+grp_deadzone,Dead zone,dara_online_lag_m015,corel_official,rebuffer,100,18.13863,0.0,0.0,higher
+grp_deadzone,Dead zone,dara_online_lag_m015,corel_official,mean_bitrate_mbps,100,6.80612,0.0,0.0,higher
+grp_deadzone,Dead zone,dara_online_lag_m015,pensieve_official,J0,100,28.24724,0.0,0.0,higher
+grp_deadzone,Dead zone,dara_online_lag_m015,pensieve_official,rebuffer,100,14.30128,0.0,0.0,higher
+grp_deadzone,Dead zone,dara_online_lag_m015,pensieve_official,mean_bitrate_mbps,100,7.32308,0.0,0.0,higher
+grp_deadzone,Dead zone,dara_online_lag_m015,robustmpc,J0,100,59.46829,0.0,0.0,higher
+grp_deadzone,Dead zone,dara_online_lag_m015,robustmpc,rebuffer,100,23.429,0.0,0.0,higher
+grp_deadzone,Dead zone,dara_online_lag_m015,robustmpc,mean_bitrate_mbps,100,13.30835,0.0,0.0,higher
+scn_urban_pedestrian,Urban pedestrian,dara_online_lag_m015,ppo_lagrangian_t0.5,J0,100,-7.40526,0.0,0.0,lower
+scn_urban_pedestrian,Urban pedestrian,dara_online_lag_m015,ppo_lagrangian_t0.5,rebuffer,100,-5.80627,0.0,0.0,lower
+scn_urban_pedestrian,Urban pedestrian,dara_online_lag_m015,ppo_lagrangian_t0.5,mean_bitrate_mbps,100,-5.04605,0.0,0.0,lower
+scn_urban_pedestrian,Urban pedestrian,dara_online_lag_m015,corel_official,J0,100,26.83619,0.0,0.0,higher
+scn_urban_pedestrian,Urban pedestrian,dara_online_lag_m015,corel_official,rebuffer,100,4.82139,0.0,0.0,higher
+scn_urban_pedestrian,Urban pedestrian,dara_online_lag_m015,corel_official,mean_bitrate_mbps,100,3.59665,0.0,0.0,higher
+scn_urban_pedestrian,Urban pedestrian,dara_online_lag_m015,pensieve_official,J0,100,30.205,0.0,0.0,higher
+scn_urban_pedestrian,Urban pedestrian,dara_online_lag_m015,pensieve_official,rebuffer,100,3.64511,0.0,0.0,higher
+scn_urban_pedestrian,Urban pedestrian,dara_online_lag_m015,pensieve_official,mean_bitrate_mbps,100,5.94777,0.0,0.0,higher
+scn_urban_pedestrian,Urban pedestrian,dara_online_lag_m015,robustmpc,J0,100,83.73152,0.0,0.0,higher
+scn_urban_pedestrian,Urban pedestrian,dara_online_lag_m015,robustmpc,rebuffer,100,7.44529,0.0,0.0,higher
+scn_urban_pedestrian,Urban pedestrian,dara_online_lag_m015,robustmpc,mean_bitrate_mbps,100,13.41138,0.0,0.0,higher
+scn_crowded_stationary,Crowded stationary,dara_online_lag_m015,ppo_lagrangian_t0.5,J0,100,-7.7697,0.0,0.0,lower
+scn_crowded_stationary,Crowded stationary,dara_online_lag_m015,ppo_lagrangian_t0.5,rebuffer,100,-9.44865,0.0,0.0,lower
+scn_crowded_stationary,Crowded stationary,dara_online_lag_m015,ppo_lagrangian_t0.5,mean_bitrate_mbps,100,-6.74119,0.0,0.0,lower
+scn_crowded_stationary,Crowded stationary,dara_online_lag_m015,corel_official,J0,100,36.82313,0.0,0.0,higher
+scn_crowded_stationary,Crowded stationary,dara_online_lag_m015,corel_official,rebuffer,100,6.69013,0.0,0.0,higher
+scn_crowded_stationary,Crowded stationary,dara_online_lag_m015,corel_official,mean_bitrate_mbps,100,5.67379,0.0,0.0,higher
+scn_crowded_stationary,Crowded stationary,dara_online_lag_m015,pensieve_official,J0,100,33.74821,0.0,0.0,higher
+scn_crowded_stationary,Crowded stationary,dara_online_lag_m015,pensieve_official,rebuffer,100,4.8965,0.0,0.0,higher
+scn_crowded_stationary,Crowded stationary,dara_online_lag_m015,pensieve_official,mean_bitrate_mbps,100,7.09269,0.0,0.0,higher
+scn_crowded_stationary,Crowded stationary,dara_online_lag_m015,robustmpc,J0,100,84.83428,0.0,0.0,higher
+scn_crowded_stationary,Crowded stationary,dara_online_lag_m015,robustmpc,rebuffer,100,9.70625,0.0,0.0,higher
+scn_crowded_stationary,Crowded stationary,dara_online_lag_m015,robustmpc,mean_bitrate_mbps,100,15.13689,0.0,0.0,higher
+scn_urban_driving,Urban driving,dara_online_lag_m015,ppo_lagrangian_t0.5,J0,100,-5.42341,0.0,0.0,lower
+scn_urban_driving,Urban driving,dara_online_lag_m015,ppo_lagrangian_t0.5,rebuffer,100,-4.79064,0.0,0.0,lower
+scn_urban_driving,Urban driving,dara_online_lag_m015,ppo_lagrangian_t0.5,mean_bitrate_mbps,100,-4.55442,0.0,0.0,lower
+scn_urban_driving,Urban driving,dara_online_lag_m015,corel_official,J0,100,25.17857,0.0,0.0,higher
+scn_urban_driving,Urban driving,dara_online_lag_m015,corel_official,rebuffer,100,3.33033,0.0,0.0,higher
+scn_urban_driving,Urban driving,dara_online_lag_m015,corel_official,mean_bitrate_mbps,100,3.62308,0.0,0.0,higher
+scn_urban_driving,Urban driving,dara_online_lag_m015,pensieve_official,J0,100,27.14012,0.0,0.0,higher
+scn_urban_driving,Urban driving,dara_online_lag_m015,pensieve_official,rebuffer,100,2.78197,0.0,0.0,higher
+scn_urban_driving,Urban driving,dara_online_lag_m015,pensieve_official,mean_bitrate_mbps,100,5.91237,0.0,0.0,higher
+scn_urban_driving,Urban driving,dara_online_lag_m015,robustmpc,J0,100,72.98296,0.0,0.0,higher
+scn_urban_driving,Urban driving,dara_online_lag_m015,robustmpc,rebuffer,100,5.80214,0.0,0.0,higher
+scn_urban_driving,Urban driving,dara_online_lag_m015,robustmpc,mean_bitrate_mbps,100,12.7476,0.0,0.0,higher
+scn_motorway,Motorway,dara_online_lag_m015,ppo_lagrangian_t0.5,J0,100,-1.74737,0.03267,0.03507,lower
+scn_motorway,Motorway,dara_online_lag_m015,ppo_lagrangian_t0.5,rebuffer,100,-0.93573,0.0,0.0,lower
+scn_motorway,Motorway,dara_online_lag_m015,ppo_lagrangian_t0.5,mean_bitrate_mbps,100,-2.00668,7e-05,8e-05,lower
+scn_motorway,Motorway,dara_online_lag_m015,corel_official,J0,100,14.88166,0.0,0.0,higher
+scn_motorway,Motorway,dara_online_lag_m015,corel_official,rebuffer,100,0.6971,1e-05,2e-05,higher
+scn_motorway,Motorway,dara_online_lag_m015,corel_official,mean_bitrate_mbps,100,1.54156,0.00073,0.00078,higher
+scn_motorway,Motorway,dara_online_lag_m015,pensieve_official,J0,100,22.53973,0.0,0.0,higher
+scn_motorway,Motorway,dara_online_lag_m015,pensieve_official,rebuffer,100,0.56881,0.00016,0.00019,higher
+scn_motorway,Motorway,dara_online_lag_m015,pensieve_official,mean_bitrate_mbps,100,4.49533,0.0,0.0,higher
+scn_motorway,Motorway,dara_online_lag_m015,robustmpc,J0,100,65.85899,0.0,0.0,higher
+scn_motorway,Motorway,dara_online_lag_m015,robustmpc,rebuffer,100,0.831,2e-05,3e-05,higher
+scn_motorway,Motorway,dara_online_lag_m015,robustmpc,mean_bitrate_mbps,100,10.57417,0.0,0.0,higher
+scn_suburban_open,Suburban open,dara_online_lag_m015,ppo_lagrangian_t0.5,J0,100,4.43063,2e-05,2e-05,higher
+scn_suburban_open,Suburban open,dara_online_lag_m015,ppo_lagrangian_t0.5,rebuffer,100,-0.08228,0.10053,0.10531,no difference
+scn_suburban_open,Suburban open,dara_online_lag_m015,ppo_lagrangian_t0.5,mean_bitrate_mbps,100,0.48011,0.00601,0.0063,higher
+scn_suburban_open,Suburban open,dara_online_lag_m015,corel_official,J0,100,-2.38466,1e-05,1e-05,lower
+scn_suburban_open,Suburban open,dara_online_lag_m015,corel_official,rebuffer,100,0.03349,0.95935,0.95935,no difference
+scn_suburban_open,Suburban open,dara_online_lag_m015,corel_official,mean_bitrate_mbps,100,-1.36391,0.0,0.0,lower
+scn_suburban_open,Suburban open,dara_online_lag_m015,pensieve_official,J0,100,2.16505,0.4895,0.4895,no difference
+scn_suburban_open,Suburban open,dara_online_lag_m015,pensieve_official,rebuffer,100,-0.017,0.44459,0.45493,no difference
+scn_suburban_open,Suburban open,dara_online_lag_m015,pensieve_official,mean_bitrate_mbps,100,0.07653,0.14968,0.14968,no difference
+scn_suburban_open,Suburban open,dara_online_lag_m015,robustmpc,J0,100,31.65973,0.0,0.0,higher
+scn_suburban_open,Suburban open,dara_online_lag_m015,robustmpc,rebuffer,100,0.17307,0.04986,0.05351,no difference
+scn_suburban_open,Suburban open,dara_online_lag_m015,robustmpc,mean_bitrate_mbps,100,4.21509,0.0,0.0,higher
+scn_tunnel,Tunnel,dara_online_lag_m015,ppo_lagrangian_t0.5,J0,100,138.8745,0.0,0.0,higher
+scn_tunnel,Tunnel,dara_online_lag_m015,ppo_lagrangian_t0.5,rebuffer,100,-188.2643,0.0,0.0,lower
+scn_tunnel,Tunnel,dara_online_lag_m015,ppo_lagrangian_t0.5,mean_bitrate_mbps,100,-16.79701,0.0,0.0,lower
+scn_tunnel,Tunnel,dara_online_lag_m015,corel_official,J0,100,41.07901,0.0,0.0,higher
+scn_tunnel,Tunnel,dara_online_lag_m015,corel_official,rebuffer,100,56.20215,0.0,0.0,higher
+scn_tunnel,Tunnel,dara_online_lag_m015,corel_official,mean_bitrate_mbps,100,8.87621,0.0,0.0,higher
+scn_tunnel,Tunnel,dara_online_lag_m015,pensieve_official,J0,100,25.85173,0.0,0.0,higher
+scn_tunnel,Tunnel,dara_online_lag_m015,pensieve_official,rebuffer,100,42.4009,0.0,0.0,higher
+scn_tunnel,Tunnel,dara_online_lag_m015,pensieve_official,mean_bitrate_mbps,100,6.46326,0.0,0.0,higher
+scn_tunnel,Tunnel,dara_online_lag_m015,robustmpc,J0,100,32.42589,0.0,0.0,higher
+scn_tunnel,Tunnel,dara_online_lag_m015,robustmpc,rebuffer,100,71.57757,0.0,0.0,higher
+scn_tunnel,Tunnel,dara_online_lag_m015,robustmpc,mean_bitrate_mbps,100,11.87182,0.0,0.0,higher
+scn_under_bridge,Under bridge,dara_online_lag_m015,ppo_lagrangian_t0.5,J0,100,-7.24313,0.0,0.0,lower
+scn_under_bridge,Under bridge,dara_online_lag_m015,ppo_lagrangian_t0.5,rebuffer,100,-3.19679,0.0,0.0,lower
+scn_under_bridge,Under bridge,dara_online_lag_m015,ppo_lagrangian_t0.5,mean_bitrate_mbps,100,-4.14383,0.0,0.0,lower
+scn_under_bridge,Under bridge,dara_online_lag_m015,corel_official,J0,100,24.55897,0.0,0.0,higher
+scn_under_bridge,Under bridge,dara_online_lag_m015,corel_official,rebuffer,100,4.34276,0.0,0.0,higher
+scn_under_bridge,Under bridge,dara_online_lag_m015,corel_official,mean_bitrate_mbps,100,3.05701,0.0,0.0,higher
+scn_under_bridge,Under bridge,dara_online_lag_m015,pensieve_official,J0,100,31.55632,0.0,0.0,higher
+scn_under_bridge,Under bridge,dara_online_lag_m015,pensieve_official,rebuffer,100,3.03921,0.0,0.0,higher
+scn_under_bridge,Under bridge,dara_online_lag_m015,pensieve_official,mean_bitrate_mbps,100,5.73562,0.0,0.0,higher
+scn_under_bridge,Under bridge,dara_online_lag_m015,robustmpc,J0,100,97.98957,0.0,0.0,higher
+scn_under_bridge,Under bridge,dara_online_lag_m015,robustmpc,rebuffer,100,7.62619,0.0,0.0,higher
+scn_under_bridge,Under bridge,dara_online_lag_m015,robustmpc,mean_bitrate_mbps,100,14.59121,0.0,0.0,higher
+scn_urban_canyon,Urban canyon,dara_online_lag_m015,ppo_lagrangian_t0.5,J0,100,0.60967,0.03911,0.04098,higher
+scn_urban_canyon,Urban canyon,dara_online_lag_m015,ppo_lagrangian_t0.5,rebuffer,100,-28.76951,0.0,0.0,lower
+scn_urban_canyon,Urban canyon,dara_online_lag_m015,ppo_lagrangian_t0.5,mean_bitrate_mbps,100,-11.15478,0.0,0.0,lower
+scn_urban_canyon,Urban canyon,dara_online_lag_m015,corel_official,J0,100,45.25712,0.0,0.0,higher
+scn_urban_canyon,Urban canyon,dara_online_lag_m015,corel_official,rebuffer,100,14.37438,0.0,0.0,higher
+scn_urban_canyon,Urban canyon,dara_online_lag_m015,corel_official,mean_bitrate_mbps,100,8.14917,0.0,0.0,higher
+scn_urban_canyon,Urban canyon,dara_online_lag_m015,pensieve_official,J0,100,32.16297,0.0,0.0,higher
+scn_urban_canyon,Urban canyon,dara_online_lag_m015,pensieve_official,rebuffer,100,12.57981,0.0,0.0,higher
+scn_urban_canyon,Urban canyon,dara_online_lag_m015,pensieve_official,mean_bitrate_mbps,100,7.94471,0.0,0.0,higher
+scn_urban_canyon,Urban canyon,dara_online_lag_m015,robustmpc,J0,100,53.69906,0.0,0.0,higher
+scn_urban_canyon,Urban canyon,dara_online_lag_m015,robustmpc,rebuffer,100,17.77413,0.0,0.0,higher
+scn_urban_canyon,Urban canyon,dara_online_lag_m015,robustmpc,mean_bitrate_mbps,100,12.14447,0.0,0.0,higher

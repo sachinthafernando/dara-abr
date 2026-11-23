@@ -1,0 +1,43 @@
+====================================================================================================
+Lumos5G   expected: ['data/raw/lumos5g/*.csv']
+  files: 1: ['Lumos5G-v1.0.csv']
+  columns (19): ['run_num', 'seq_num', 'abstractSignalStr', 'latitude', 'longitude', 'movingSpeed', 'compassDirection', 'nrStatus', 'lte_rssi', 'lte_rsrp', 'lte_rsrq', 'lte_rssnr', 'nr_ssRsrp', 'nr_ssRsrq', 'nr_ssSinr', 'Throughput', 'mobility_mode', 'trajectory_direction', 'tower_id']
+  required columns: OK
+  rows: 68,118
+  mobility_mode values: {'walking': 56935, 'driving': 11183}
+  trajectory_direction values: {'CW': 38021, 'ACW': 30097}
+  nrStatus values: {'CONNECTED': 52374, 'NOT_RESTRICTED': 15667, 'NONE': 77}
+  seq_num step within a trace: {1.0: 68000}
+  throughput (Mbit/s): n=68,118  missing=0.0%  min=0  p10=43  median=424  mean=521  p90=1.18e+03  max=1920
+  share exactly 0: 2.5%   share below 1 Mbit/s: 2.5%   share above plausible max 3000: 0.00%
+  source traces: 118   duplicate seconds averaged: 0   missing seconds: 0
+  after cleaning (gaps <= 3 s interpolated, parts < 120 s dropped): 118 traces, 18.92 h; length min/median/max = 181/785/800 s
+  traces per prefix (usable as TRACE_PREFIX): {'Walking': 72, 'Driving': 46}
+  first rows:
+   run_num  seq_num  abstractSignalStr   latitude  longitude  movingSpeed  compassDirection        nrStatus  lte_rssi  lte_rsrp  lte_rsrq     lte_rssnr  nr_ssRsrp  nr_ssRsrq  nr_ssSinr  Throughput mobility_mode trajectory_direction  tower_id
+0        1      1.0                  2  44.975314 -93.259316     0.094889               150  NOT_RESTRICTED     -61.0       -94     -14.0  2.147484e+09        NaN        NaN        NaN          78       driving                   CW        16
+1        1      2.0                  2  44.975311 -93.259311     0.876634               117  NOT_RESTRICTED     -61.0       -94     -14.0  2.147484e+09        NaN        NaN        NaN         117       driving                   CW        16
+2        1      3.0                  2  44.975305 -93.259292     2.225798               113  NOT_RESTRICTED     -61.0       -94     -14.0  2.147484e+09        NaN        NaN        NaN         110       driving                   CW        16
+====================================================================================================
+Irish 5G   expected: ['data/raw/irish5g/**/Download/Static/*.csv', 'data/raw/irish5g/**/Download/Driving/*.csv']
+  files: 21 {'Driving': 16, 'Static': 5}: ['B_2019.12.14_10.16.30.csv', 'B_2019.12.16_07.22.43.csv', 'B_2019.12.16_11.49.59.csv', 'B_2019.12.16_12.27.05.csv'] ...
+  columns (26): ['Timestamp', 'Longitude', 'Latitude', 'Speed', 'Operatorname', 'CellID', 'NetworkMode', 'RSRP', 'RSRQ', 'SNR', 'CQI', 'RSSI', 'DL_bitrate', 'UL_bitrate', 'State', 'PINGAVG', 'PINGMIN', 'PINGMAX', 'PINGSTDEV', 'PINGLOSS', 'CELLHEX', 'NODEHEX', 'LACHEX', 'RAWCELLID', 'NRxRSRP', 'NRxRSRQ']
+  required columns: OK
+  rows: 43,208   unparsed timestamps: 0.00% (format '%Y.%m.%d_%H.%M.%S'; example '2019.12.14_10.16.30')
+  time step between rows (s): {1.0: 32531, 2.0: 5939, 0.0: 4272, 3.0: 442, 4.0: 3}
+  NetworkMode values: {'5G': 29576, 'LTE': 9204, 'HSPA+': 4338, 'HSDPA': 41, 'HSUPA': 41, 'UMTS': 8}
+  throughput (Mbit/s): n=43,208  missing=0.0%  min=0  p10=0.011  median=12.1  mean=41.7  p90=156  max=532.9
+  share exactly 0: 3.8%   share below 1 Mbit/s: 16.2%   share above plausible max 3000: 0.00%
+  source traces: 21   duplicate seconds averaged: 4,272   missing seconds: 6,832
+  after cleaning (gaps <= 3 s interpolated, parts < 120 s dropped): 21 traces, 12.71 h; length min/median/max = 387/2090/6654 s
+  traces per prefix (usable as TRACE_PREFIX): {'Driving': 16, 'Static': 5}
+  first rows:
+             Timestamp  Longitude   Latitude  Speed Operatorname  CellID NetworkMode  RSRP  RSRQ  SNR  CQI  RSSI  DL_bitrate  UL_bitrate State PINGAVG PINGMIN PINGMAX PINGSTDEV PINGLOSS CELLHEX NODEHEX LACHEX  RAWCELLID  NRxRSRP  NRxRSRQ
+0  2019.12.14_10.16.30  -8.388186  51.935604      0            B      12          5G   -99   -15  6.0   12   -90           7           1     D       -       -       -         -        -       C    A81B   9CBA   11016972   -100.0    -15.0
+1  2019.12.14_10.16.31  -8.388470  51.935739      1            B      12          5G   -99   -15  6.0   12   -90           7           1     D       -       -       -         -        -       C    A81B   9CBA   11016972   -100.0    -15.0
+2  2019.12.14_10.16.31  -8.388470  51.935739      1            B      12          5G   -99   -15  6.0   12   -90           0           0     D       -       -       -         -        -       C    A81B   9CBA   11016972   -100.0    -15.0
+====================================================================================================
+Puffer   expected: ['data/raw/puffer/video_size_*.csv']   (re-running scripts/data/calibrate_content.py; the calibrated data/processed/content_params.json is already included)
+  not found (optional)
+====================================================================================================
+RESULT: OK - run scripts/data/prepare_traces.py next

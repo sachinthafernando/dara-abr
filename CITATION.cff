@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite the thesis below."
+title: "DARA: reward diagnosis for RL-based adaptive bitrate streaming on 5G mmWave"
+version: 1.0.0
+date-released: "2026-11-23"
+type: software
+authors:
+  - family-names: Fernando
+    given-names: Koruwage Sachintha Theekshana
+    affiliation: University of Hertfordshire
+# repository-code: "https://github.com/<your-github-username>/dara-abr"   # TODO: uncomment after publishing
+keywords:
+  - adaptive bitrate streaming
+  - reinforcement learning
+  - reward misalignment
+  - 5G mmWave
+  - PPO-Lagrangian
+preferred-citation:
+  type: thesis
+  title: "Deep Reinforcement Learning for Adaptive Bitrate Streaming in 5G mmWave Networks"
+  authors:
+    - family-names: Fernando
+      given-names: Koruwage Sachintha Theekshana
+  institution:
+    name: University of Hertfordshire
+  thesis-type: "Master's by Research"
+  year: 2026
+references:
+  - type: conference-paper
+    title: "DARA: Improving RL-based adaptive bitrate streaming through reward diagnosis"
+    authors:
+      - family-names: Fernando
+        given-names: S. T.
+      - family-names: Lee
+        given-names: H.
+      - family-names: Kourtessis
+        given-names: P.
+      - family-names: Senior
+        given-names: J. M.
+      - family-names: Shin
+        given-names: S.
+    notes: "Submitted."
