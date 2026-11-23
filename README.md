@@ -1,6 +1,6 @@
 # DARA: Reward Diagnosis for RL-based Adaptive Bitrate Streaming on 5G mmWave
 
-[![CI](https://github.com/<your-github-username>/dara-abr/actions/workflows/ci.yml/badge.svg)](https://github.com/<your-github-username>/dara-abr/actions/workflows/ci.yml)
+[![CI](https://github.com/sachinthafernando/dara-abr/actions/workflows/ci.yml/badge.svg)](https://github.com/<your-github-username>/dara-abr/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
 ![PyTorch](https://img.shields.io/badge/PyTorch-%E2%89%A52.0-ee4c2c)
 ![Licence](https://img.shields.io/badge/licence-pending-lightgrey)
