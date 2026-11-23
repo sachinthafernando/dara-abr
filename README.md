@@ -1,6 +1,6 @@
 # DARA: Reward Diagnosis for RL-based Adaptive Bitrate Streaming on 5G mmWave
 
-[![CI](https://github.com/sachinthafernando/dara-abr/actions/workflows/ci.yml/badge.svg)](https://github.com/<your-github-username>/dara-abr/actions/workflows/ci.yml)
+[![CI](https://github.com/sachinthafernando/dara-abr/actions/workflows/ci.yml/badge.svg)](https://github.com/sachinthafernando/dara-abr/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
 ![PyTorch](https://img.shields.io/badge/PyTorch-%E2%89%A52.0-ee4c2c)
 ![Licence](https://img.shields.io/badge/licence-pending-lightgrey)
@@ -116,7 +116,7 @@ You need Python 3.9 or later. The original runs used Python 3.9 with CUDA PyTorc
 also checked end to end with Python 3.13 and PyTorch 2.15 on CPU.
 
 ```bash
-git clone https://github.com/<your-github-username>/dara-abr.git
+git clone https://github.com/sachinthafernando/dara-abr.git
 cd dara-abr
 python -m venv .venv && source .venv/bin/activate        # Windows: .venv\Scripts\activate
 
